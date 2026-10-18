@@ -146,6 +146,11 @@ html:not(.anim) .sc3 .church{height:80cqw}
 .wishes li span{font-family:Jost,sans-serif;font-weight:500;font-size:2.6cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dk);margin-right:1.6cqw}
 .panel .tag{margin:0;font-family:Jost,sans-serif;font-weight:600;font-size:3.4cqw;letter-spacing:.05em;color:var(--gold-dk);word-break:break-word}
 .panel .with{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:4.8cqw;line-height:1.25;color:var(--rose)}
+.calls{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;width:100%}
+.calls li{margin-top:1.6cqw}
+.calls a{display:block;text-decoration:none;padding:2cqw 1cqw;border-radius:3cqw;background:rgba(184,145,63,.12);border:1px solid rgba(184,145,63,.5)}
+.calls a span{display:block;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:4.6cqw;line-height:1.1;color:var(--ink)}
+.calls a b{display:block;font-family:Jost,sans-serif;font-weight:500;font-size:3.6cqw;letter-spacing:.05em;color:var(--gold-dk);margin-top:.6cqw;font-variant-numeric:lining-nums tabular-nums}
 .panel .end{width:100%;border-top:1px solid rgba(184,145,63,.5);padding-top:3cqw;display:flex;flex-direction:column;align-items:center;gap:2.4cqw}
 
 q{text-wrap:balance}
@@ -266,11 +271,15 @@ q{text-wrap:balance}
       <div><h3>The Bride's Family</h3><p data-t="brideParents"></p></div>
     </div>
     <div class="wishes"><h3>Best wishes from</h3><ul data-list="wishes"></ul></div>
-    <div class="end">
-      <p class="with">With love, the families of <span data-t="groom"></span> &amp; <span data-t="bride"></span></p>
-      <p class="tag" data-t="hashtag"></p>
-      <a class="btn" data-href="share" target="_blank" rel="noopener">Share on WhatsApp</a>
+  </div>
+  <div class="panel p2 rb">
+    <p class="with">With love, the families of <span data-t="groom"></span> &amp; <span data-t="bride"></span></p>
+    <p class="tag" data-t="hashtag"></p>
+    <div class="calls">
+      <div><h3>Groom's side</h3><ul data-list="callsGroom"></ul></div>
+      <div><h3>Bride's side</h3><ul data-list="callsBride"></ul></div>
     </div>
+    <a class="btn" data-href="share" target="_blank" rel="noopener">Share on WhatsApp</a>
   </div>
 </section>
 
@@ -290,6 +299,8 @@ q{text-wrap:balance}
 "groomParents":"Mr. Larance Kennedy & Mrs. Benila",
 "brideParents":"Mr. M. Vijay Ponnaya & Mrs. V. Amala Vijay",
 "wishes":[{"role":"Brother","name":"Mr. Allen Daniel"},{"role":"Sister-in-law","name":"Mrs. Evangeline Roja S"},{"role":"Master","name":"Lionel Jireh A"}],
+"callsGroom":[{"name":"Alfred","phone":"8248618149"},{"name":"Allen","phone":"9080265536"},{"name":"Jick","phone":"9363107247"}],
+"callsBride":[{"name":"Vijay","phone":"8883337569"},{"name":"Amala","phone":"9952004564"},{"name":"John","phone":"9952608378"}],
 "hashtag":"#ALFREDgotFELICIA-ted",
 "couplePhoto":""
 }</script>
@@ -338,6 +349,16 @@ q{text-wrap:balance}
   document.querySelectorAll('[data-list="wishes"]').forEach(function (ul) {
     (C.wishes || []).forEach(function (w) { var li = document.createElement('li'), s = document.createElement('span'); s.textContent = w.role; li.appendChild(s); li.appendChild(document.createTextNode(w.name)); ul.appendChild(li); });
   });
+  var fmtPhone = function (ph) { return ph.length === 10 ? ph.slice(0, 5) + ' ' + ph.slice(5) : ph; };
+  ['callsGroom', 'callsBride'].forEach(function (k) {
+    document.querySelectorAll('[data-list="' + k + '"]').forEach(function (ul) {
+      (C[k] || []).forEach(function (c) {
+        var li = document.createElement('li'), a = document.createElement('a'), n = document.createElement('span'), b = document.createElement('b');
+        a.href = 'tel:+91' + c.phone.replace(/\D/g, ''); n.textContent = c.name; b.textContent = fmtPhone(c.phone);
+        a.appendChild(n); a.appendChild(b); li.appendChild(a); ul.appendChild(li);
+      });
+    });
+  });
 
   if (C.couplePhoto) document.querySelectorAll('#gate .g-photo img').forEach(function (i) { i.src = C.couplePhoto; });
   document.title = C.groomName + ' & ' + C.brideName + ' – Wedding Invitation';
@@ -356,7 +377,7 @@ q{text-wrap:balance}
 
 <script>
 /* ---------- the scroll story ----------
-   Seven "beats", 10 timeline units apart. At every beat the screen is a finished, readable page;
+   Eight "beats", 10 timeline units apart. At every beat the screen is a finished, readable page;
    a short swipe in either direction glides to the next beat (scroll snapping), so nobody has to
    scroll far or precisely. */
 (function () {
@@ -379,13 +400,13 @@ q{text-wrap:balance}
   var tl = g.timeline({
     defaults: { ease: 'none' },
     scrollTrigger: {
-      trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 5.3); },
+      trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 6); },
       pin: true, anticipatePin: 1, scrub: 1, invalidateOnRefresh: true,
       snap: { snapTo: 'labelsDirectional', duration: { min: 0.7, max: 1.5 }, delay: 0.08, ease: 'power3.inOut' },
       onUpdate: function (s) { g.set('.prog', { scaleX: s.progress }); fx.boost = Math.min(4, Math.abs(s.getVelocity()) / 900); }
     }
   });
-  for (var i = 0; i <= 6; i++) tl.addLabel('b' + i, i * 10);
+  for (var i = 0; i <= 7; i++) tl.addLabel('b' + i, i * 10);
 
   // beat 0 → 1 : the arch dissolves softly into the rings (no zoom, no flash)
   tl.to('.sc0 .bg', { scale: 1.12, duration: 10 }, 0);
@@ -419,11 +440,13 @@ q{text-wrap:balance}
   tl.fromTo('.sc4 .bg', { scale: 1.3 }, { scale: 1, duration: 9 }, 41);
   show('.sc4 .f-top .rv', 45.5, 2.5, 0.6);
 
-  // beat 5 → 6 : families, best wishes, share
+  // beat 5 → 6 → 7 : families and best wishes, then contacts and share
   hide('.sc4 .f-top .rv', 50, 2.2);
   show('.sc4 .p1', 54.5, 4.5);
+  hide('.sc4 .p1', 60, 2.5);
+  show('.sc4 .p2', 64.5, 4.5);
   tl.to('#fx', { opacity: 0.12, duration: 3 }, 51);   // keep petals off the names
-  tl.to({}, { duration: 0 }, 60);            // timeline ends exactly on the last beat
+  tl.to({}, { duration: 0 }, 70);            // timeline ends exactly on the last beat
 
   // "Please scroll the screen" button glides to the next page for anyone who prefers tapping
   function goNext() {                        // behaves like a small swipe: the snapping glides to the next page

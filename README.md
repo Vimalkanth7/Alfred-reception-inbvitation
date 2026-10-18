@@ -3,7 +3,7 @@
 A scroll-driven Christian wedding reception invitation. Static site: open `index.html`, or deploy the folder as-is (Vercel, Netlify, GitHub Pages).
 
 ## The scroll story
-Seven pages, one swipe each (scrolling snaps, so a short flick glides to the next page; the "Please scroll the screen" button on page 1 does the same):
+Eight pages, one swipe each (scrolling snaps, so a short flick glides to the next page; the "Please scroll the screen" button on page 1 does the same):
 
 1. **Arch by the lake** – names write themselves in
 2. **The rings** – the arch melts into the rings; engagement wording, full names, "Love is patient…"
@@ -11,10 +11,11 @@ Seven pages, one swipe each (scrolling snaps, so a short flick glides to the nex
 4. **Save the date** – date card with live countdown
 5. **The celebrations** – ONE page listing Engagement, Wedding Ceremony and Reception (date, time, venue, map button each)
 6. **The swing** – "Forever begins here"
-7. **Families, best wishes, hashtag, Share on WhatsApp**
+7. **Families & best wishes**
+8. **Contacts** (tap to call), hashtag, Share on WhatsApp
 
 ## Edit the details
-Everything is in the `inv-config` JSON block near the bottom of `index.html`: names, the `events` list (name, date `YYYY-MM-DDTHH:mm`, venue, place, map link), parents, best wishes, hashtag, `couplePhoto`. The second event (the wedding ceremony) drives the date card and countdown.
+Everything is in the `inv-config` JSON block near the bottom of `index.html`: names, the `events` list (name, date `YYYY-MM-DDTHH:mm`, venue, place, map link), parents, best wishes, contact numbers (`callsGroom` / `callsBride`), hashtag, `couplePhoto`. The second event (the wedding ceremony) drives the date card and countdown.
 
 ## Music (optional)
 `music.mp3` ("Before the Altar") plays after the guest taps Open Invitation. Replace the file to change the song.
