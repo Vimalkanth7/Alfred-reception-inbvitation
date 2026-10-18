@@ -96,6 +96,7 @@ ul{list-style:none;margin:0;padding:0}
 .dateline{display:flex;align-items:flex-end;justify-content:center;gap:4cqw;line-height:1}
 .dateline .wd,.dateline .my{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6.6cqw;padding-bottom:3cqw;color:#FFF8EA}
 .dateline .dd{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27cqw;line-height:.82;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.5)}
+.sc2 .tm2{margin:0;font-family:Jost,sans-serif;font-weight:500;font-size:3.3cqw;letter-spacing:.04em;color:var(--gold-hi)}
 .sc2 .tm{margin:0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:5.6cqw;color:#FFF8EA}
 .cd{display:flex;gap:2.4cqw;justify-content:center;margin-top:2cqw}
 .cd div{min-width:15cqw;padding:2.4cqw 1cqw 2cqw;border-radius:3cqw;border:1px solid rgba(235,213,154,.6);background:rgba(20,12,4,.4);display:flex;flex-direction:column;align-items:center;gap:1cqw}
@@ -226,6 +227,7 @@ html:not(.anim) .sc3 .church{height:95cqw}
     <p class="lab">Save the date</p>
     <div class="dateline"><span class="wd" data-t="weekday"></span><span class="dd" data-t="day"></span><span class="my" data-t="monthYear"></span></div>
     <p class="tm">Engagement at <span data-t="time"></span></p>
+    <p class="tm2">Wedding &amp; reception · <span data-t="weddingShort"></span></p>
     <div class="cd" aria-label="Countdown to the engagement">
       <div><b data-cd="d">00</b><span>Days</span></div>
       <div><b data-cd="h">00</b><span>Hours</span></div>
@@ -250,9 +252,17 @@ html:not(.anim) .sc3 .church{height:95cqw}
     <p class="lab rv">The Wedding Ceremony</p>
     <h2 class="rv" data-t="weddingVenue"></h2>
     <p class="rule rv" aria-hidden="true"><i></i><b></b><i></i></p>
-    <p class="when rv" data-t="weddingNote"></p>
+    <p class="when rv"><span data-t="weddingDay"></span><br><span data-t="weddingTime"></span></p>
     <p class="addr rv" data-t="weddingAddress"></p>
     <div class="acts rv"><a class="btn" data-href="weddingMapLink" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a></div>
+  </div>
+  <div class="copy tc">
+    <p class="lab rv">The Reception</p>
+    <h2 class="rv" data-t="venueName"></h2>
+    <p class="rule rv" aria-hidden="true"><i></i><b></b><i></i></p>
+    <p class="when rv"><span data-t="receptionDay"></span><br><span data-t="receptionTime"></span></p>
+    <p class="addr rv" data-t="venueAddress"></p>
+    <div class="acts rv"><a class="btn" data-href="mapLink" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a></div>
   </div>
 </section>
 
@@ -295,7 +305,7 @@ html:not(.anim) .sc3 .church{height:95cqw}
 "mapLink":"https://maps.app.goo.gl/vCXs3BYnpGxhYhxz6",
 "weddingVenue":"CSI All Saints Church","weddingAddress":"Pollachi",
 "weddingMapLink":"https://maps.app.goo.gl/tgPgEYHVL2QaUguk9",
-"weddingNote":"Date and time to be announced",
+"weddingDate":"2026-12-28T10:00","receptionDate":"2026-12-28T12:00",
 "groomParents":"Mr. Larance Kennedy & Mrs. Benila",
 "brideParents":"Mr. M. Vijay Ponnaya & Mrs. V. Amala Vijay",
 "wishes":[{"role":"Brother","name":"Mr. Allen Daniel"},{"role":"Sister-in-law","name":"Mrs. Evangeline Roja S"},{"role":"Master","name":"Lionel Jireh A"}],
@@ -315,19 +325,22 @@ html:not(.anim) .sc3 .church{height:95cqw}
   if (ok) { try { time = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }); } catch (e) {} }
   var weekday = ok ? f({ weekday: 'long' }) : '';
   var dateLong = ok ? f({ day: 'numeric', month: 'long', year: 'numeric' }) : '';
+  var part = function (iso, o) { var x = new Date(iso); if (isNaN(x.getTime())) return ''; try { return o === 't' ? x.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }) : x.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); } catch (e) { return ''; } };
   var V = {
+    weddingShort: (function () { var x = new Date(C.weddingDate); return isNaN(x.getTime()) ? '' : x.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }); })(),
+    weddingDay: part(C.weddingDate), weddingTime: part(C.weddingDate, 't'), receptionDay: part(C.receptionDate), receptionTime: part(C.receptionDate, 't'),
     groom: C.groomName, bride: C.brideName, groomFull: C.groomFull, brideFull: C.brideFull,
     weekday: weekday, dateLong: dateLong, dateFull: weekday + ', ' + dateLong, time: time,
     day: ok ? String(d.getDate()).padStart(2, '0') : '00',
     monthYear: ok ? f({ month: 'long', year: 'numeric' }) : '',
     gateDate: weekday + ' · ' + dateLong,
     venueName: C.venueName, venueAddress: C.venueAddress,
-    weddingVenue: C.weddingVenue, weddingAddress: C.weddingAddress, weddingNote: C.weddingNote,
+    weddingVenue: C.weddingVenue, weddingAddress: C.weddingAddress,
     hashtag: C.hashtag, groomParents: C.groomParents, brideParents: C.brideParents
   };
   document.querySelectorAll('[data-t]').forEach(function (el) { var v = V[el.getAttribute('data-t')]; if (v != null) el.textContent = v; });
 
-  var shareText = 'You are invited to the engagement of ' + C.groomFull + ' & ' + C.brideFull + ' on ' + V.dateFull + ' at ' + time + ', ' + C.venueName + ', ' + C.venueAddress + '.';
+  var shareText = 'You are invited to the engagement of ' + C.groomFull + ' & ' + C.brideFull + ' – ' + V.dateFull + ', ' + time + ', ' + C.venueName + ', ' + C.venueAddress + '. Wedding: ' + V.weddingDay + ', ' + V.weddingTime + ', ' + C.weddingVenue + '. Reception: ' + V.receptionTime + ', ' + C.venueName + '.';
   var H = { mapLink: C.mapLink, weddingMapLink: C.weddingMapLink,
     share: 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + (/^https?:/.test(location.href) ? location.href.split('#')[0] : '')) };
   document.querySelectorAll('[data-href]').forEach(function (a) {
@@ -363,7 +376,7 @@ html:not(.anim) .sc3 .church{height:95cqw}
 
 <script>
 /* ---------- the scroll story ----------
-   Nine "beats", 10 timeline units apart. At every beat the screen is a finished, readable page;
+   Ten "beats", 10 timeline units apart. At every beat the screen is a finished, readable page;
    a short swipe in either direction glides to the next beat (scroll snapping), so nobody has to
    scroll far or precisely. */
 (function () {
@@ -386,13 +399,13 @@ html:not(.anim) .sc3 .church{height:95cqw}
   var tl = g.timeline({
     defaults: { ease: 'none' },
     scrollTrigger: {
-      trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 6.2); },
+      trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 6.9); },
       pin: true, anticipatePin: 1, scrub: 0.8, invalidateOnRefresh: true,
       snap: { snapTo: 'labelsDirectional', duration: { min: 0.5, max: 1.3 }, delay: 0.1, ease: 'power2.inOut' },
       onUpdate: function (s) { g.set('.prog', { scaleX: s.progress }); fx.boost = Math.min(4, Math.abs(s.getVelocity()) / 900); }
     }
   });
-  for (var i = 0; i <= 8; i++) tl.addLabel('b' + i, i * 10);
+  for (var i = 0; i <= 9; i++) tl.addLabel('b' + i, i * 10);
 
   // beat 0 → 1 : walk through the arch into the rings
   tl.to('.sc0 .bg', { scale: 2.1, ease: 'power1.in', duration: 10 }, 0);
@@ -423,20 +436,24 @@ html:not(.anim) .sc3 .church{height:95cqw}
   hide('.sc3 .ta .rv', 40, 2.2);
   show('.sc3 .tb .rv', 44, 2.5, 0.4);
 
-  // beat 5 → 6 : dissolve to the garden swing
+  // beat 5 → 6 : reception details
   hide('.sc3 .tb .rv', 50, 2.2);
-  tl.to('.sc3 .church', { y: -60, scale: 1.06, autoAlpha: 0, duration: 4, ease: 'power1.in' }, 50);
-  tl.fromTo('#s4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 7, ease: 'power1.inOut', immediateRender: true }, 51);
-  tl.fromTo('.sc4 .bg', { scale: 1.3 }, { scale: 1, duration: 9 }, 51);
-  show('.sc4 .f-top .rv', 55.5, 2.5, 0.6);
+  show('.sc3 .tc .rv', 54, 2.5, 0.4);
 
-  // beat 6 → 7 → 8 : families and best wishes, then contacts
-  hide('.sc4 .f-top .rv', 60, 2.2);
-  show('.sc4 .p1', 64.5, 4.5);
-  hide('.sc4 .p1', 70, 2.5);
-  show('.sc4 .p2', 74.5, 4.5);
-  tl.to('#fx', { opacity: 0.12, duration: 3 }, 61);   // keep petals off the names and phone numbers
-  tl.to({}, { duration: 0 }, 80);            // timeline ends exactly on the last beat
+  // beat 6 → 7 : dissolve to the garden swing
+  hide('.sc3 .tc .rv', 60, 2.2);
+  tl.to('.sc3 .church', { y: -60, scale: 1.06, autoAlpha: 0, duration: 4, ease: 'power1.in' }, 60);
+  tl.fromTo('#s4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 7, ease: 'power1.inOut', immediateRender: true }, 61);
+  tl.fromTo('.sc4 .bg', { scale: 1.3 }, { scale: 1, duration: 9 }, 61);
+  show('.sc4 .f-top .rv', 65.5, 2.5, 0.6);
+
+  // beat 7 → 8 → 9 : families and best wishes, then contacts
+  hide('.sc4 .f-top .rv', 70, 2.2);
+  show('.sc4 .p1', 74.5, 4.5);
+  hide('.sc4 .p1', 80, 2.5);
+  show('.sc4 .p2', 84.5, 4.5);
+  tl.to('#fx', { opacity: 0.12, duration: 3 }, 71);   // keep petals off the names and phone numbers
+  tl.to({}, { duration: 0 }, 90);            // timeline ends exactly on the last beat
 
   // "Please scroll the screen" button glides to the next page for anyone who prefers tapping
   function goNext() {                        // behaves like a small swipe: the snapping glides to the next page
