@@ -2,36 +2,38 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Alfred – Wedding Reception</title>
-<meta name="description" content="You are warmly invited to the wedding reception of Alfred.">
+<title>Alfred &amp; Felicia – Engagement Invitation</title>
+<meta name="description" content="You are warmly invited to the engagement of Alfred Daniel Chelliah &amp; Felicia Caren Ethal – Sunday, 27 December 2026, 7:00 PM, Maharaja Mahal, Pollachi.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Alfred – Wedding Reception">
-<meta property="og:description" content="You are warmly invited to our wedding reception. Tap to open your invitation.">
-<meta property="og:image" content="preview.jpg">
+<meta property="og:site_name" content="Alfred &amp; Felicia">
+<meta property="og:title" content="Alfred &amp; Felicia – Engagement Invitation">
+<meta property="og:description" content="You are warmly invited to our engagement – Sunday, 27 December 2026, 7:00 PM, Pollachi. Tap to open your invitation.">
+<meta property="og:url" content="https://alfred-invitation.vercel.app/">
+<meta property="og:image" content="https://alfred-invitation.vercel.app/preview.jpg?v=3">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://alfred-invitation.vercel.app/preview.jpg?v=3">
 <meta name="theme-color" content="#FBF6EC">
 <link rel="preload" as="image" href="assets/hero-arch.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 32%27%3E%3Cpath d=%27M12 3v26M4 11h16%27 fill=%27none%27 stroke=%27%23B8913F%27 stroke-width=%273%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
 <style>
-@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 500;font-display:swap;src:url(assets/fonts/CormorantGaramond-400i.woff2) format('woff2')}
-@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 500;font-display:swap;src:url(assets/fonts/CormorantGaramond-400.woff2) format('woff2')}
-@font-face{font-family:'Jost';font-style:normal;font-weight:400 500;font-display:swap;src:url(assets/fonts/Jost-400.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(assets/fonts/CormorantGaramond-400i.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/CormorantGaramond-400.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/Jost-400.woff2) format('woff2')}
 @font-face{font-family:'Pinyon Script';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/PinyonScript-400.woff2) format('woff2')}
 
-:root{--ivory:#FBF6EC;--cream:#F3EAD9;--gold:#B8913F;--gold-hi:#E6CD8E;--ink:#3A3228;--slate:#3D4F5C;--rose:#7A4552;--night:#1B130C}
+:root{--ivory:#FBF6EC;--cream:#F3EAD9;--gold:#B8913F;--gold-hi:#EBD59A;--gold-dk:#7A5A14;--ink:#33291F;--slate:#2F4458;--rose:#7A3F4D;--night:#1B130C}
 *{box-sizing:border-box}
 html{background:#E9E0CF}
 body{margin:0;min-height:100svh;font-family:Jost,'Segoe UI',sans-serif;color:var(--ink);background:radial-gradient(120% 90% at 50% 0%,#F7EFE0 0%,#E7DDC9 60%,#D8E1DC 100%);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.script{font-family:'Pinyon Script','Snell Roundhand',cursive;font-weight:400}
-.serif{font-family:'Cormorant Garamond',Georgia,serif}
-.lab{font-family:Jost,sans-serif;font-weight:500;font-size:3cqw;letter-spacing:.36em;text-transform:uppercase;margin:0}
+ul{list-style:none;margin:0;padding:0}
+.lab{font-family:Jost,sans-serif;font-weight:500;font-size:3.1cqw;letter-spacing:.32em;text-transform:uppercase;margin:0}
 .rule{display:flex;align-items:center;justify-content:center;gap:2.4cqw;color:var(--gold);margin:0}
-.rule i{display:block;width:12cqw;height:1px;background:currentColor;opacity:.7}
+.rule i{display:block;width:12cqw;height:1px;background:currentColor;opacity:.8}
 .rule b{display:block;width:1.8cqw;height:1.8cqw;transform:rotate(45deg);border:1px solid currentColor}
-.cross{display:block;width:6cqw;height:auto;color:var(--gold)}
 
 /* ---------- frame: full-bleed on phones, a portrait "card" on wide screens ---------- */
 .story{position:relative}
@@ -40,111 +42,126 @@ a{color:inherit}
 @media (min-aspect-ratio:4/5){.frame{box-shadow:0 30px 90px rgba(70,48,14,.35),0 0 0 1px rgba(184,145,63,.35)}}
 
 /* default (no JS / reduced motion): scenes stack as ordinary sections */
-.scene{position:relative;aspect-ratio:9/16;overflow:hidden;color:var(--ivory)}
+.scene{position:relative;min-height:177cqw;overflow:hidden;color:var(--ivory);display:flex;flex-direction:column;justify-content:center;gap:6cqw;padding:10cqw 0}
 .bgw{position:absolute;inset:-2%}
-.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transform:translateZ(0)}
 .veil{position:absolute;inset:0;pointer-events:none}
-.copy{position:absolute;left:0;right:0;text-align:center;padding:0 8cqw;display:flex;flex-direction:column;align-items:center}
+.copy{position:relative;text-align:center;padding:0 7cqw;display:flex;flex-direction:column;align-items:center}
+.panel,.t2,.church{position:relative}
+.cuew{display:none}
 
 /* animated mode: one pinned stage, scenes layered on top of each other */
 .anim .frame{height:100svh}
-.anim .scene{position:absolute;inset:0;aspect-ratio:auto}
+.anim .scene{position:absolute;inset:0;min-height:0;padding:0;display:block}
 .anim .scene:not(.sc0){will-change:clip-path}
+.anim .copy{position:absolute;left:0;right:0}
+.anim .panel,.anim .t2,.anim .church{position:absolute}
+.anim .cuew{display:flex}
 
-/* ---------- 0 · arch by the lake ---------- */
+/* ---------- 1 · arch by the lake ---------- */
 .sc0{color:var(--slate);background:#E9F0EE}
 .sc0 .bg{object-position:47% 60%;transform-origin:47% 62%}
-.sc0 .veil{background:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.18) 34%,rgba(255,255,255,0) 50%)}
-.sc0 .copy{top:7%;gap:2cqw}
-.sc0 .lab{color:#8A6A25}
-.names{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.9;text-shadow:0 0 5cqw rgba(255,255,255,.9),0 0 1.5cqw rgba(255,255,255,.8)}
+.sc0 .veil{background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.22) 36%,rgba(255,255,255,0) 52%)}
+.sc0 .copy{top:6.5%;gap:2cqw}
+.sc0 .lab{color:var(--gold-dk);font-weight:600;font-size:3.2cqw}
+.names{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.9;text-shadow:0 0 5cqw rgba(255,255,255,.95),0 0 1.6cqw rgba(255,255,255,.9)}
 .names .nm{display:block;font-family:'Pinyon Script',cursive;font-size:21cqw;color:var(--slate);padding:0 4cqw}
-.names .amp{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:8.5cqw;color:#A8843F;margin:-1cqw 0}
-.sc0 .sub{margin:2cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:5.4cqw;color:var(--slate);text-shadow:0 0 3cqw rgba(255,255,255,.9)}
-.cue{position:absolute;left:0;right:0;bottom:4%;display:flex;flex-direction:column;align-items:center;gap:2.4cqw;color:#fff;text-shadow:0 1px 8px rgba(30,50,20,.55)}
-.cue .lab{font-size:2.6cqw}
-.cue i{display:block;width:1px;height:11cqw;background:linear-gradient(#fff,rgba(255,255,255,0));transform-origin:50% 0;animation:cue 1.8s ease-in-out infinite}
-@keyframes cue{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.names .amp{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:8.5cqw;color:#9A7424;margin:-1cqw 0}
+.sc0 .sub{margin:2cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:5.3cqw;color:var(--slate);text-shadow:0 0 3cqw rgba(255,255,255,.95),0 0 1cqw rgba(255,255,255,.9)}
+.cuew{position:absolute;left:0;right:0;bottom:4.5%;justify-content:center;pointer-events:none}
+.cue{pointer-events:auto;display:flex;align-items:center;gap:2.4cqw;padding:2.6cqw 5.4cqw 2.6cqw 6cqw;border-radius:99px;border:1px solid rgba(184,145,63,.8);background:rgba(255,255,255,.94);color:var(--slate);box-shadow:0 10px 28px rgba(40,60,40,.28);font:600 3.9cqw/1.1 Jost,sans-serif;letter-spacing:.04em;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.cue svg{width:5cqw;height:5cqw;animation:bob 1.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(-.6cqw)}50%{transform:translateY(1cqw)}}
 
-/* ---------- 1 · the rings ---------- */
-.sc1 .veil{background:linear-gradient(180deg,rgba(32,20,10,.68) 0%,rgba(32,20,10,.2) 34%,rgba(32,20,10,0) 48%,rgba(32,20,10,.5) 72%,rgba(32,20,10,.82) 100%)}
-.sc1 .t1{top:8%;gap:3cqw}
-.sc1 .t1 .lab{color:var(--gold-hi)}
-.sc1 .t1 p.big{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.6cqw;line-height:1.25;text-shadow:0 2px 14px rgba(0,0,0,.45)}
-.sc1 .t2{bottom:7%;gap:3cqw}
-.sc1 .t2 q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.2cqw;line-height:1.3;text-shadow:0 2px 14px rgba(0,0,0,.6)}
-.sc1 .t2 .ref{color:var(--gold-hi);font-size:2.8cqw}
-.sc1 .names2{margin:0;font-family:'Pinyon Script',cursive;font-size:13cqw;line-height:1;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.55)}
-.sc1 .names2 i{font-family:'Cormorant Garamond',serif;font-size:.5em;color:var(--gold-hi);padding:0 .25em}
+/* ---------- 2 · the rings ---------- */
+.sc1 .veil{background:linear-gradient(180deg,rgba(28,17,8,.78) 0%,rgba(28,17,8,.3) 32%,rgba(28,17,8,0) 46%,rgba(28,17,8,.55) 66%,rgba(28,17,8,.88) 100%)}
+.sc1 .t1{top:7.5%;gap:3cqw}
+.sc1 .lab{color:var(--gold-hi);font-weight:600}
+.sc1 .t1 p.big{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6.6cqw;line-height:1.22;color:#FFF8EA;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.sc1 .t2{bottom:6%;gap:2.4cqw}
+.sc1 .names2{margin:0;font-family:'Pinyon Script',cursive;font-size:14cqw;line-height:1;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.7)}
+.sc1 .names2 i{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:.5em;color:var(--gold-hi);padding:0 .25em}
+.sc1 .full{display:flex;flex-direction:column;gap:.8cqw;margin:0;font-family:Jost,sans-serif;font-weight:500;font-size:3.3cqw;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.sc1 .t2 q{quotes:none;margin-top:1.4cqw;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:5.6cqw;line-height:1.25;color:#FFF8EA;text-shadow:0 2px 14px rgba(0,0,0,.8)}
+.sc1 .t2 .ref{color:var(--gold-hi);font-size:2.9cqw}
 
-/* ---------- 2 · the aisle ---------- */
-.sc2 .veil{background:linear-gradient(180deg,rgba(25,15,5,.25) 0%,rgba(25,15,5,0) 22%,rgba(25,15,5,.05) 45%,rgba(25,15,5,.78) 100%)}
-.sc2 .t1{bottom:9%;gap:3.4cqw}
-.sc2 .t1 q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9cqw;line-height:1.12;text-shadow:0 2px 18px rgba(0,0,0,.65)}
-.sc2 .t1 .ref{color:var(--gold-hi)}
-.glass{background:linear-gradient(180deg,rgba(251,246,236,.2),rgba(251,246,236,.08));border:1px solid rgba(230,205,142,.65);border-radius:6cqw;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-.sc2 .t2{bottom:6%;left:6cqw;right:6cqw;padding:7cqw 5cqw 6cqw;gap:2.4cqw;position:absolute;text-align:center;display:flex;flex-direction:column;align-items:center;color:var(--ivory)}
-.sc2 .t2 .lab{color:var(--gold-hi)}
+/* ---------- 3 · the aisle ---------- */
+.sc2 .veil{background:linear-gradient(180deg,rgba(25,15,5,.3) 0%,rgba(25,15,5,0) 22%,rgba(25,15,5,.1) 45%,rgba(25,15,5,.84) 100%)}
+.sc2 .t1{bottom:8%;gap:3.2cqw}
+.sc2 .t1 q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:9cqw;line-height:1.1;color:#FFF8EA;text-shadow:0 2px 18px rgba(0,0,0,.85),0 0 3cqw rgba(0,0,0,.5)}
+.sc2 .t1 .ref{color:var(--gold-hi);font-weight:600}
+.glass{background:linear-gradient(180deg,rgba(40,26,12,.52),rgba(40,26,12,.4));border:1px solid rgba(235,213,154,.7);border-radius:6cqw;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.sc2 .t2{bottom:6%;left:6cqw;right:6cqw;padding:7cqw 5cqw 6cqw;gap:2.2cqw;text-align:center;display:flex;flex-direction:column;align-items:center;color:var(--ivory)}
+.sc2 .t2 .lab{color:var(--gold-hi);font-weight:600}
 .dateline{display:flex;align-items:flex-end;justify-content:center;gap:4cqw;line-height:1}
-.dateline .wd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.6cqw;padding-bottom:3cqw;writing-mode:horizontal-tb}
-.dateline .dd{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27cqw;line-height:.82;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.4)}
-.dateline .my{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.6cqw;padding-bottom:3cqw}
-.sc2 .tm{margin:0;font-family:'Cormorant Garamond',serif;font-size:5.4cqw}
+.dateline .wd,.dateline .my{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6.6cqw;padding-bottom:3cqw;color:#FFF8EA}
+.dateline .dd{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27cqw;line-height:.82;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.5)}
+.sc2 .tm{margin:0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:5.6cqw;color:#FFF8EA}
 .cd{display:flex;gap:2.4cqw;justify-content:center;margin-top:2cqw}
-.cd div{min-width:15cqw;padding:2.4cqw 1cqw 2cqw;border-radius:3cqw;border:1px solid rgba(230,205,142,.5);background:rgba(20,12,4,.35);display:flex;flex-direction:column;align-items:center;gap:1cqw}
-.cd b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:7.6cqw;line-height:1;color:#fff}
-.cd span{font-size:2.2cqw;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-hi)}
+.cd div{min-width:15cqw;padding:2.4cqw 1cqw 2cqw;border-radius:3cqw;border:1px solid rgba(235,213,154,.6);background:rgba(20,12,4,.4);display:flex;flex-direction:column;align-items:center;gap:1cqw}
+.cd b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:7.8cqw;line-height:1;color:#fff}
+.cd span{font-size:2.3cqw;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-hi)}
 
-/* ---------- 3 · the church ---------- */
+/* ---------- 4 · the church ---------- */
 .sc3{background:radial-gradient(90% 60% at 50% 30%,#FFFCF4 0%,#F6EEDD 70%,#EDE2CC 100%);color:var(--ink)}
-.sc3 .church{position:absolute;left:6%;right:6%;top:2%;height:54%;display:flex;align-items:center;justify-content:center}
-.sc3 .church img{max-width:100%;max-height:100%;object-fit:contain;display:block;filter:drop-shadow(0 18px 24px rgba(120,90,40,.18))}
-.sc3 .copy{bottom:5%;gap:2.6cqw}
-.sc3 .lab{color:#8A6A25}
-.sc3 h2{margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:9.2cqw;line-height:1.05;color:var(--ink)}
-.sc3 .when{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6cqw;color:var(--ink)}
-.sc3 .addr{margin:0;font-size:3.6cqw;line-height:1.5;color:#6B5E4D;max-width:78cqw}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:2cqw;min-height:12.4cqw;padding:0 7cqw;border-radius:99px;border:1px solid var(--gold);font-family:Jost,sans-serif;font-weight:500;font-size:3cqw;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:linear-gradient(180deg,#F4E4B4,#E0C275 55%,#C49A45);box-shadow:0 8px 24px rgba(120,86,20,.28);cursor:pointer;-webkit-tap-highlight-color:transparent}
-.btn.ghost{background:rgba(255,255,255,.45);box-shadow:none}
-.btn svg{width:4.4cqw;height:4.4cqw}
+.sc3 .church{left:3%;right:3%;top:2%;height:58%;display:flex;align-items:center;justify-content:center}
+.anim .sc3 .church{position:absolute}
+html:not(.anim) .sc3 .church{height:95cqw}
+.sc3 .church img{max-width:100%;max-height:100%;object-fit:contain;display:block;filter:drop-shadow(0 18px 24px rgba(120,90,40,.2))}
+.sc3 .copy{bottom:4.5%;gap:2.4cqw}
+.sc3 .lab{color:var(--gold-dk);font-weight:600}
+.sc3 h2{margin:0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:9.4cqw;line-height:1.04;color:var(--ink)}
+.sc3 .when{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6cqw;line-height:1.2;color:var(--ink)}
+.sc3 .addr{margin:0;font-size:4cqw;font-weight:500;line-height:1.45;color:#5A4D3C}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:2cqw;min-height:12.6cqw;padding:0 7cqw;border-radius:99px;border:1px solid var(--gold);font-family:Jost,sans-serif;font-weight:600;font-size:3.1cqw;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:linear-gradient(180deg,#F6E7B8,#E2C479 55%,#C49A45);box-shadow:0 8px 24px rgba(120,86,20,.3);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn svg{width:4.6cqw;height:4.6cqw}
 .acts{display:flex;flex-wrap:wrap;gap:3cqw;justify-content:center;margin-top:1cqw}
 
-/* ---------- 4 · the swing ---------- */
+/* ---------- 5 · the swing ---------- */
 .sc4{color:var(--rose)}
 .sc4 .bgw{inset:-4%}
-.sc4 .veil{background:linear-gradient(180deg,rgba(255,250,246,.0) 0%,rgba(255,250,246,.0) 60%,rgba(255,248,244,.35) 100%)}
-.sc4 .f-top{top:13%;gap:2.4cqw}
-.sc4 .f-top .script{margin:0;font-size:11cqw;white-space:nowrap;line-height:1;color:var(--rose);text-shadow:0 0 5cqw rgba(255,255,255,.95),0 0 2cqw rgba(255,255,255,.9)}
-.sc4 .f-top p{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:5.3cqw;line-height:1.25;color:#5C3A44;text-shadow:0 0 4cqw rgba(255,255,255,.95)}
-.sc4 .panel{position:absolute;left:5cqw;right:5cqw;top:5%;padding:5.5cqw 4cqw 5cqw;border-radius:6cqw;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3cqw;background:linear-gradient(180deg,rgba(255,252,247,.78),rgba(255,247,242,.9));border:1px solid rgba(184,145,63,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 50px rgba(122,69,82,.22)}
+.sc4 .veil{background:linear-gradient(180deg,rgba(255,250,246,0) 0%,rgba(255,250,246,0) 60%,rgba(255,248,244,.35) 100%)}
+.sc4 .f-top{top:11%;gap:2.4cqw;padding:7cqw 4cqw;isolation:isolate}
+.sc4 .f-top::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(closest-side,rgba(255,250,246,.95) 0%,rgba(255,250,246,.82) 55%,rgba(255,250,246,0) 100%)}
+.sc4 .f-top .script{margin:0;font-family:'Pinyon Script',cursive;font-size:11.5cqw;line-height:1;white-space:nowrap;color:#6A2F3D;text-shadow:0 0 5cqw rgba(255,255,255,.98),0 0 2cqw rgba(255,255,255,.95)}
+.sc4 .f-top p.s{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:5.4cqw;line-height:1.25;color:#4F2E37;text-shadow:0 0 4cqw rgba(255,255,255,.98),0 0 1.5cqw rgba(255,255,255,.9)}
+.sc4 .panel{left:4.5cqw;right:4.5cqw;top:4.5%;padding:5.5cqw 4cqw 5cqw;border-radius:6cqw;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3cqw;background:linear-gradient(180deg,rgba(255,252,247,.9),rgba(255,247,242,.94));border:1px solid rgba(184,145,63,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 50px rgba(122,63,77,.25)}
+.panel h3{margin:0 0 1.6cqw;font-family:Jost,sans-serif;font-weight:600;font-size:2.6cqw;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-dk)}
 .fam{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;width:100%}
-.fam h3{margin:0 0 1.6cqw;font-family:Jost,sans-serif;font-weight:500;font-size:2.5cqw;letter-spacing:.26em;text-transform:uppercase;color:#8A6A25}
-.fam p{margin:0;font-family:'Cormorant Garamond',serif;font-size:4.4cqw;line-height:1.25;color:var(--ink)}
-.panel .tag{margin:0;font-family:Jost,sans-serif;font-weight:500;font-size:3.1cqw;letter-spacing:.06em;color:#8A6A25;word-break:break-word}
-.panel .with{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:4.6cqw;color:var(--rose)}
+.fam p{margin:0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:4.6cqw;line-height:1.2;color:var(--ink)}
+.wishes{width:100%;border-top:1px solid rgba(184,145,63,.5);padding-top:3cqw}
+.wishes li{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:4.4cqw;line-height:1.3;color:var(--ink)}
+.wishes li span{font-family:Jost,sans-serif;font-weight:500;font-size:2.6cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dk);margin-right:1.6cqw}
+.panel .tag{margin:0;font-family:Jost,sans-serif;font-weight:600;font-size:3.4cqw;letter-spacing:.05em;color:var(--gold-dk);word-break:break-word}
+.panel .with{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:4.8cqw;line-height:1.25;color:var(--rose)}
+.calls{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;width:100%}
+.calls li{margin-top:1.6cqw}
+.calls a{display:block;text-decoration:none;padding:1.8cqw 1cqw;border-radius:3cqw;background:rgba(184,145,63,.12);border:1px solid rgba(184,145,63,.45)}
+.calls a span{display:block;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:4.4cqw;line-height:1.1;color:var(--ink)}
+.calls a b{display:block;font-family:Jost,sans-serif;font-weight:500;font-size:3.5cqw;letter-spacing:.05em;color:var(--gold-dk);margin-top:.6cqw}
 
 /* ---------- chrome ---------- */
 .prog{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#B8913F,#F4E4B4);z-index:80;display:none}
 .anim .prog{display:block}
-#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50;display:none}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50;display:none;opacity:.85}
 .anim #fx{display:block}
-#musicBtn{display:none;position:fixed;right:max(12px,env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top));z-index:9999;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:rgba(251,246,236,.82);color:var(--ink);font-size:18px;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent;backdrop-filter:blur(6px)}
+#musicBtn{display:none;position:fixed;right:max(12px,env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top));z-index:9999;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:rgba(251,246,236,.9);color:var(--ink);font-size:19px;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent;backdrop-filter:blur(6px)}
 
 /* gate */
-#gate{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2svh;padding:24px;text-align:center;background:radial-gradient(120% 80% at 50% 25%,#FFFDF7 0%,#F3EAD9 60%,#E3D6BC 100%);color:var(--ink);touch-action:none;cursor:pointer;transition:opacity .9s ease,visibility .9s;-webkit-tap-highlight-color:transparent;container-type:inline-size}
+#gate{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2svh;padding:24px;text-align:center;background:radial-gradient(120% 80% at 50% 25%,#FFFDF7 0%,#F3EAD9 60%,#E3D6BC 100%);color:var(--ink);touch-action:none;cursor:pointer;transition:opacity .9s ease,visibility .9s;-webkit-tap-highlight-color:transparent}
 #gate.gone{opacity:0;visibility:hidden;pointer-events:none}
 #gate .g-cross{width:30px;color:var(--gold)}
-#gate .g-lab{font:500 12px/1 Jost,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#8A6A25}
+#gate .g-lab{font:600 12px/1 Jost,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-dk)}
 #gate .g-photo{width:min(190px,44vw);aspect-ratio:3/4;border-radius:999px 999px 14px 14px;overflow:hidden;box-shadow:0 0 0 2px var(--gold),0 0 0 8px rgba(251,246,236,.9),0 0 0 9px rgba(184,145,63,.5),0 24px 50px rgba(90,60,10,.28);margin:4px 0}
 #gate .g-photo img{width:100%;height:100%;object-fit:cover;object-position:47% 62%;display:block;animation:gz 9s ease-in-out infinite alternate}
 @keyframes gz{from{transform:scale(1)}to{transform:scale(1.14)}}
 #gate .g-names{font-family:'Pinyon Script',cursive;font-size:clamp(46px,14vw,70px);line-height:1;color:var(--slate)}
-#gate .g-names i{font:italic 500 .42em 'Cormorant Garamond',serif;color:#A8843F;padding:0 .3em}
-#gate .g-date{font:400 15px/1.4 Jost,sans-serif;color:#6B5E4D;letter-spacing:.1em}
-#gate .g-btn{margin-top:8px;min-height:54px;padding:0 34px;border-radius:999px;border:1px solid var(--gold);font:500 14px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:linear-gradient(180deg,#F4E4B4,#E0C275 55%,#C49A45);cursor:pointer;animation:gpulse 2.2s ease-in-out infinite}
-#gate .g-hint{font:400 12px/1 Jost,sans-serif;color:#8B7C66}
+#gate .g-names i{font:italic 600 .42em 'Cormorant Garamond',serif;color:#9A7424;padding:0 .3em}
+#gate .g-date{font:500 15px/1.4 Jost,sans-serif;color:#54483A;letter-spacing:.08em}
+#gate .g-btn{margin-top:8px;min-height:54px;padding:0 34px;border-radius:999px;border:1px solid var(--gold);font:600 14px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:linear-gradient(180deg,#F6E7B8,#E2C479 55%,#C49A45);cursor:pointer;animation:gpulse 2.2s ease-in-out infinite}
+#gate .g-hint{font:500 12px/1 Jost,sans-serif;color:#7A6C58}
 @keyframes gpulse{0%,100%{box-shadow:0 0 0 0 rgba(184,145,63,.5)}50%{box-shadow:0 0 0 14px rgba(184,145,63,0)}}
-@media (prefers-reduced-motion:reduce){#gate .g-photo img,#gate .g-btn,.cue i{animation:none}}
+@media (prefers-reduced-motion:reduce){#gate .g-photo img,#gate .g-btn,.cue svg{animation:none}}
 </style>
 <script src="assets/js/gsap.min.js"></script>
 <script src="assets/js/ScrollTrigger.min.js"></script>
@@ -154,9 +171,9 @@ a{color:inherit}
 <!-- Welcome gate: the guest's tap on "Open Invitation" is what lets the phone start the music -->
 <div id="gate" role="dialog" aria-label="Open the invitation">
   <svg class="g-cross" viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M12 2v28M4 10h16"/></svg>
-  <span class="g-lab">Wedding Reception</span>
+  <span class="g-lab">Engagement Ceremony</span>
   <div class="g-photo"><img src="assets/hero-arch.webp" alt=""></div>
-  <div class="g-names"><span data-t="groom">Alfred</span> <i>&amp;</i> <span data-t="bride">Bride</span></div>
+  <div class="g-names"><span data-t="groom"></span> <i>&amp;</i> <span data-t="bride"></span></div>
   <div class="g-date" data-t="gateDate"></div>
   <button class="g-btn" type="button">Open Invitation</button>
   <span class="g-hint">&#127925; with music</span>
@@ -174,23 +191,24 @@ a{color:inherit}
   <div class="bgw"><img class="bg" src="assets/hero-arch.webp" alt="A couple standing beneath a floral wedding arch beside a lake"></div>
   <div class="veil"></div>
   <div class="copy">
-    <p class="lab rv">Wedding Reception</p>
-    <h1 class="names rv"><span class="nm" data-t="groom">Alfred</span><span class="amp">&amp;</span><span class="nm" data-t="bride">Bride</span></h1>
-    <p class="sub rv" data-t="dateLong"></p>
+    <p class="lab rv">Engagement Ceremony</p>
+    <h1 class="names rv"><span class="nm" data-t="groom"></span><span class="amp">&amp;</span><span class="nm" data-t="bride"></span></h1>
+    <p class="sub rv" data-t="dateFull"></p>
   </div>
-  <div class="cue rv" aria-hidden="true"><span class="lab">Scroll</span><i></i></div>
+  <div class="cuew"><button class="cue rv" type="button" id="cue" aria-label="Scroll to continue"><span>Please scroll the screen</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div>
 </section>
 
 <!-- 2 · The rings -->
 <section class="scene sc1" id="s1" aria-label="Invitation">
-  <div class="bgw"><img class="bg" src="assets/rings.webp" alt="Two gold wedding rings resting on an open Bible"></div>
+  <div class="bgw"><img class="bg" src="assets/rings.webp" alt="Two gold rings resting on an open Bible"></div>
   <div class="veil"></div>
   <div class="copy t1">
     <p class="lab rv">Together with their families</p>
-    <p class="big rv">request the honour of your presence at the wedding reception of</p>
+    <p class="big rv">request the honour of your presence at the engagement of</p>
   </div>
   <div class="copy t2">
-    <p class="names2 rv"><span data-t="groom">Alfred</span><i>&amp;</i><span data-t="bride">Bride</span></p>
+    <p class="names2 rv"><span data-t="groom"></span><i>&amp;</i><span data-t="bride"></span></p>
+    <p class="full rv"><span data-t="groomFull"></span><span>&amp; <span data-t="brideFull"></span></span></p>
     <q class="rv">Two are better than one, because they have a good return for their labour.</q>
     <p class="lab ref rv">Ecclesiastes 4:9</p>
   </div>
@@ -204,11 +222,11 @@ a{color:inherit}
     <q class="rv">A cord of three strands is not easily broken.</q>
     <p class="lab ref rv">Ecclesiastes 4:12</p>
   </div>
-  <div class="t2 glass rb" aria-label="Date of the reception">
+  <div class="t2 glass rb" aria-label="Date of the engagement">
     <p class="lab">Save the date</p>
     <div class="dateline"><span class="wd" data-t="weekday"></span><span class="dd" data-t="day"></span><span class="my" data-t="monthYear"></span></div>
-    <p class="tm">Reception from <span data-t="time"></span></p>
-    <div class="cd" aria-label="Countdown to the reception">
+    <p class="tm">Engagement at <span data-t="time"></span></p>
+    <div class="cd" aria-label="Countdown to the engagement">
       <div><b data-cd="d">00</b><span>Days</span></div>
       <div><b data-cd="h">00</b><span>Hours</span></div>
       <div><b data-cd="m">00</b><span>Min</span></div>
@@ -217,38 +235,50 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- 4 · The church -->
-<section class="scene sc3" id="s3" aria-label="Venue">
+<!-- 4 · The church : engagement venue, then wedding venue -->
+<section class="scene sc3" id="s3" aria-label="Venues">
   <div class="church rb"><img src="assets/church.webp" alt="Watercolor painting of the church"></div>
-  <div class="copy">
-    <p class="lab rv">Join us at</p>
+  <div class="copy ta">
+    <p class="lab rv">The Engagement</p>
     <h2 class="rv" data-t="venueName"></h2>
     <p class="rule rv" aria-hidden="true"><i></i><b></b><i></i></p>
-    <p class="when rv"><span data-t="dateLong"></span> · <span data-t="time"></span></p>
-    <p class="addr rv"><span data-t="venueAddress"></span><br>Dinner from <span data-t="dinnerTime"></span></p>
+    <p class="when rv"><span data-t="dateFull"></span><br><span data-t="time"></span></p>
+    <p class="addr rv" data-t="venueAddress"></p>
     <div class="acts rv"><a class="btn" data-href="mapLink" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a></div>
+  </div>
+  <div class="copy tb">
+    <p class="lab rv">The Wedding Ceremony</p>
+    <h2 class="rv" data-t="weddingVenue"></h2>
+    <p class="rule rv" aria-hidden="true"><i></i><b></b><i></i></p>
+    <p class="when rv" data-t="weddingNote"></p>
+    <p class="addr rv" data-t="weddingAddress"></p>
+    <div class="acts rv"><a class="btn" data-href="weddingMapLink" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a></div>
   </div>
 </section>
 
-<!-- 5 · The swing -->
+<!-- 5 · The swing : blessings, families, contacts -->
 <section class="scene sc4" id="s4" aria-label="Blessings">
   <div class="bgw"><img class="bg" src="assets/swing.webp" alt="A floral garden swing"></div>
   <div class="veil"></div>
   <div class="copy f-top">
     <p class="script rv">Forever begins here</p>
-    <p class="rv">Your presence is the blessing we wish for</p>
+    <p class="s rv">Your presence is the blessing we wish for</p>
   </div>
-  <div class="panel rb">
+  <div class="panel p1 rb">
     <div class="fam">
       <div><h3>The Groom's Family</h3><p data-t="groomParents"></p></div>
       <div><h3>The Bride's Family</h3><p data-t="brideParents"></p></div>
     </div>
-    <p class="tag" data-t="hashtag"></p>
+    <div class="wishes"><h3>Best wishes from</h3><ul data-list="wishes"></ul></div>
+  </div>
+  <div class="panel p2 rb">
     <p class="with">With love, the families of <span data-t="groom"></span> &amp; <span data-t="bride"></span></p>
-    <div class="acts">
-      <a class="btn" data-href="share" target="_blank" rel="noopener">Share</a>
-      <a class="btn ghost" data-href="rsvp" hidden>RSVP</a>
+    <p class="tag" data-t="hashtag"></p>
+    <div class="calls">
+      <div><h3>Groom's side</h3><ul data-list="callsGroom"></ul></div>
+      <div><h3>Bride's side</h3><ul data-list="callsBride"></ul></div>
     </div>
+    <div class="acts"><a class="btn" data-href="share" target="_blank" rel="noopener">Share on WhatsApp</a></div>
   </div>
 </section>
 
@@ -256,10 +286,27 @@ a{color:inherit}
 </div>
 </main>
 
-<script id="inv-config" type="application/json">{"groomName":"Alfred","brideName":"Bride","eventDate":"2026-12-19T18:00","venueName":"Venue Name","venueAddress":"Church / hall address, City","mapLink":"","dinnerTime":"07:30 PM","hashtag":"#Alfred_Weds_Bride","groomFather":"Father's name","groomMother":"Mother's name","brideFather":"Father's name","brideMother":"Mother's name","rsvpPhone":"","couplePhoto":""}</script>
+<!-- Every detail on the invitation comes from this block -->
+<script id="inv-config" type="application/json">{
+"groomName":"Alfred","brideName":"Felicia",
+"groomFull":"Alfred Daniel Chelliah","brideFull":"Felicia Caren Ethal",
+"eventDate":"2026-12-27T19:00",
+"venueName":"Maharaja Mahal – Wedding Hall","venueAddress":"Pollachi",
+"mapLink":"https://maps.app.goo.gl/vCXs3BYnpGxhYhxz6",
+"weddingVenue":"CSI All Saints Church","weddingAddress":"Pollachi",
+"weddingMapLink":"https://maps.app.goo.gl/tgPgEYHVL2QaUguk9",
+"weddingNote":"Date and time to be announced",
+"groomParents":"Mr. Larance Kennedy & Mrs. Benila",
+"brideParents":"Mr. M. Vijay Ponnaya & Mrs. V. Amala Vijay",
+"wishes":[{"role":"Brother","name":"Mr. Allen Daniel"},{"role":"Sister-in-law","name":"Mrs. Evangeline Roja S"},{"role":"Master","name":"Lionel Jireh A"}],
+"callsGroom":[{"name":"Alfred","phone":"8248618149"},{"name":"Allen","phone":"9080265536"},{"name":"Jick","phone":"9363107247"}],
+"callsBride":[{"name":"Vijay","phone":"8883337569"},{"name":"Amala","phone":"9952004564"},{"name":"John","phone":"9952608378"}],
+"hashtag":"#ALFREDgotFELICIA-ted",
+"couplePhoto":""
+}</script>
 
 <script>
-/* ---------- data: everything the guest sees is driven by #inv-config ---------- */
+/* ---------- data ---------- */
 (function () {
   var C = JSON.parse(document.getElementById('inv-config').textContent);
   var d = new Date(C.eventDate), ok = !isNaN(d.getTime());
@@ -268,30 +315,40 @@ a{color:inherit}
   if (ok) { try { time = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }); } catch (e) {} }
   var weekday = ok ? f({ weekday: 'long' }) : '';
   var dateLong = ok ? f({ day: 'numeric', month: 'long', year: 'numeric' }) : '';
-  var parents = function (a, b) { return 'Mr. ' + a + ' & Mrs. ' + b; };
-  var shareText = 'You are invited to the wedding reception of ' + C.groomName + ' & ' + C.brideName + ' on ' + dateLong + ', ' + time + ' at ' + C.venueName + '.';
   var V = {
-    groom: C.groomName, bride: C.brideName, weekday: weekday, dateLong: dateLong, time: time,
+    groom: C.groomName, bride: C.brideName, groomFull: C.groomFull, brideFull: C.brideFull,
+    weekday: weekday, dateLong: dateLong, dateFull: weekday + ', ' + dateLong, time: time,
     day: ok ? String(d.getDate()).padStart(2, '0') : '00',
     monthYear: ok ? f({ month: 'long', year: 'numeric' }) : '',
     gateDate: weekday + ' · ' + dateLong,
-    venueName: C.venueName, venueAddress: C.venueAddress, dinnerTime: C.dinnerTime, hashtag: C.hashtag,
-    groomParents: parents(C.groomFather, C.groomMother), brideParents: parents(C.brideFather, C.brideMother)
+    venueName: C.venueName, venueAddress: C.venueAddress,
+    weddingVenue: C.weddingVenue, weddingAddress: C.weddingAddress, weddingNote: C.weddingNote,
+    hashtag: C.hashtag, groomParents: C.groomParents, brideParents: C.brideParents
   };
   document.querySelectorAll('[data-t]').forEach(function (el) { var v = V[el.getAttribute('data-t')]; if (v != null) el.textContent = v; });
-  var H = {
-    mapLink: C.mapLink,
-    share: 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + (/^https?:/.test(location.href) ? location.href.split('#')[0] : '')),
-    rsvp: C.rsvpPhone ? 'tel:' + C.rsvpPhone.replace(/[^0-9+]/g, '') : ''
-  };
+
+  var shareText = 'You are invited to the engagement of ' + C.groomFull + ' & ' + C.brideFull + ' on ' + V.dateFull + ' at ' + time + ', ' + C.venueName + ', ' + C.venueAddress + '.';
+  var H = { mapLink: C.mapLink, weddingMapLink: C.weddingMapLink,
+    share: 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + (/^https?:/.test(location.href) ? location.href.split('#')[0] : '')) };
   document.querySelectorAll('[data-href]').forEach(function (a) {
     var h = H[a.getAttribute('data-href')];
     if (h) { a.setAttribute('href', h); a.hidden = false; } else a.hidden = true;
   });
-  if (C.couplePhoto) document.querySelectorAll('#gate .g-photo img').forEach(function (i) { i.src = C.couplePhoto; });
-  document.title = C.groomName + ' & ' + C.brideName + ' – Wedding Reception';
 
-  // countdown
+  var fmtPhone = function (p) { return p.length === 10 ? p.slice(0, 5) + ' ' + p.slice(5) : p; };
+  var L = {
+    wishes: function (w) { var li = document.createElement('li'), s = document.createElement('span'); s.textContent = w.role; li.appendChild(s); li.appendChild(document.createTextNode(w.name)); return li; },
+    calls: function (c) { var li = document.createElement('li'), a = document.createElement('a'), n = document.createElement('span'), b = document.createElement('b');
+      a.href = 'tel:+91' + c.phone.replace(/\D/g, ''); n.textContent = c.name; b.textContent = fmtPhone(c.phone); a.appendChild(n); a.appendChild(b); li.appendChild(a); return li; }
+  };
+  document.querySelectorAll('[data-list]').forEach(function (ul) {
+    var k = ul.getAttribute('data-list'), items = C[k] || [], fn = k === 'wishes' ? L.wishes : L.calls;
+    items.forEach(function (it) { ul.appendChild(fn(it)); });
+  });
+
+  if (C.couplePhoto) document.querySelectorAll('#gate .g-photo img').forEach(function (i) { i.src = C.couplePhoto; });
+  document.title = C.groomName + ' & ' + C.brideName + ' – Engagement Invitation';
+
   var cd = {}; document.querySelectorAll('[data-cd]').forEach(function (el) { cd[el.getAttribute('data-cd')] = el; });
   var pad = function (n) { return String(Math.max(0, n)).padStart(2, '0'); };
   function tick() {
@@ -305,7 +362,10 @@ a{color:inherit}
 </script>
 
 <script>
-/* ---------- the scroll story ---------- */
+/* ---------- the scroll story ----------
+   Nine "beats", 10 timeline units apart. At every beat the screen is a finished, readable page;
+   a short swipe in either direction glides to the next beat (scroll snapping), so nobody has to
+   scroll far or precisely. */
 (function () {
   var g = window.gsap, ST = window.ScrollTrigger, root = document.documentElement;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -314,59 +374,79 @@ a{color:inherit}
   g.registerPlugin(ST);
   ST.config({ ignoreMobileResize: true });
   root.classList.add('anim');
+  var fx = { boost: 0 };
 
-  var $ = function (s) { return document.querySelector(s); };
-  var all = function (s) { return document.querySelectorAll(s); };
-
-  // each element gets a fixed ~1 unit stagger; glass cards only fade/slide so their backdrop blur survives
-  function show(sel, at, dur, blur) {
-    tl.fromTo(sel, { autoAlpha: 0, y: 46, filter: blur === false ? 'none' : 'blur(8px)' },
-      { autoAlpha: 1, y: 0, filter: blur === false ? 'none' : 'blur(0px)', duration: dur, stagger: 1.1, ease: 'power2.out', immediateRender: true }, at);
+  function show(sel, at, dur, each) {
+    tl.fromTo(sel, { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: dur, stagger: each == null ? 0.5 : each, ease: 'power2.out', immediateRender: true }, at);
   }
-  function hide(sel, at, dur, blur) {
-    tl.to(sel, { autoAlpha: 0, y: -38, filter: blur === false ? 'none' : 'blur(6px)', duration: dur, stagger: 0.25, ease: 'power2.in' }, at);
+  function hide(sel, at, dur) {
+    tl.to(sel, { autoAlpha: 0, y: -26, duration: dur, stagger: 0.15, ease: 'power2.in' }, at);
   }
 
   var tl = g.timeline({
     defaults: { ease: 'none' },
-    scrollTrigger: { trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 11); }, pin: true, anticipatePin: 1, scrub: 1.3, invalidateOnRefresh: true,
-      onUpdate: function (s) { g.set('.prog', { scaleX: s.progress }); fx.boost = Math.min(5, Math.abs(s.getVelocity()) / 700); } }
+    scrollTrigger: {
+      trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 6.2); },
+      pin: true, anticipatePin: 1, scrub: 0.8, invalidateOnRefresh: true,
+      snap: { snapTo: 'labelsDirectional', duration: { min: 0.5, max: 1.3 }, delay: 0.1, ease: 'power2.inOut' },
+      onUpdate: function (s) { g.set('.prog', { scaleX: s.progress }); fx.boost = Math.min(4, Math.abs(s.getVelocity()) / 900); }
+    }
   });
+  for (var i = 0; i <= 8; i++) tl.addLabel('b' + i, i * 10);
 
-  // 0 → 1 : walk through the arch into the rings
-  tl.to('.sc0 .bg', { scale: 2.1, ease: 'power1.in', duration: 26 }, 0);
-  hide('.sc0 .rv', 8, 5);
-  tl.fromTo('#s1', { clipPath: 'inset(52% 36% 16% 36% round 999px 999px 0px 0px)', autoAlpha: 0 }, { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', autoAlpha: 1, duration: 15, ease: 'power2.inOut' }, 11);
-  tl.fromTo('.sc1 .bg', { scale: 1.45 }, { scale: 1.04, duration: 36 }, 11);
-  show('.sc1 .t1 .rv', 23, 5);
-  show('.sc1 .t2 .rv', 28, 5);
-  hide('.sc1 .rv', 44, 5);
+  // beat 0 → 1 : walk through the arch into the rings
+  tl.to('.sc0 .bg', { scale: 2.1, ease: 'power1.in', duration: 10 }, 0);
+  hide('.sc0 .rv', 0, 2.5);
+  tl.fromTo('#s1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 }, 1);
+  tl.fromTo('#s1', { clipPath: 'inset(52% 36% 16% 36% round 999px 999px 0px 0px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', duration: 8.5, ease: 'power2.inOut' }, 1);
+  tl.fromTo('.sc1 .bg', { scale: 1.4 }, { scale: 1.02, duration: 12 }, 1);
+  show('.sc1 .t1 .rv', 5.5, 2.5, 0.45);
+  show('.sc1 .t2 .rv', 6.2, 2.5, 0.4);
 
-  // 1 → 2 : an iris opens onto the church aisle
-  tl.fromTo('#s2', { clipPath: 'circle(0% at 50% 58%)' }, { clipPath: 'circle(78% at 50% 58%)', duration: 13, ease: 'power2.inOut' }, 46);
-  tl.fromTo('.sc2 .bg', { scale: 1.5, transformOrigin: '50% 55%' }, { scale: 1, duration: 40 }, 46);
-  show('.sc2 .t1 .rv', 57, 5);
-  hide('.sc2 .t1 .rv', 66, 4);
-  show('.sc2 .t2', 70, 6, false);
-  hide('.sc2 .t2', 82, 4, false);
+  // beat 1 → 2 : an iris opens onto the church aisle
+  hide('.sc1 .rv', 10, 2.5);
+  tl.fromTo('#s2', { clipPath: 'circle(0% at 50% 58%)' }, { clipPath: 'circle(78% at 50% 58%)', duration: 8.5, ease: 'power2.inOut' }, 11);
+  tl.fromTo('.sc2 .bg', { scale: 1.45, transformOrigin: '50% 55%' }, { scale: 1, duration: 13 }, 11);
+  show('.sc2 .t1 .rv', 16.5, 2.5, 0.5);
 
-  // 2 → 3 : an ivory page sweeps in from the right with the church rising
-  tl.fromTo('#s3', { clipPath: 'inset(0% 0% 0% 100%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 11, ease: 'power2.inOut' }, 83);
-  tl.fromTo('.sc3 .church', { y: 140, scale: 0.8, autoAlpha: 0 }, { y: 0, scale: 1, autoAlpha: 1, duration: 14, ease: 'power2.out', immediateRender: true }, 85);
-  show('.sc3 .rv', 92, 5);
-  hide('.sc3 .rv', 107, 4);
-  tl.to('.sc3 .church', { y: -60, scale: 1.06, autoAlpha: 0, duration: 5, ease: 'power1.in' }, 107);
+  // beat 2 → 3 : the date card
+  hide('.sc2 .t1 .rv', 20, 2.5);
+  show('.sc2 .t2', 24.5, 4.5);
 
-  // 3 → 4 : a soft dissolve to the garden swing, then the families
-  tl.fromTo('#s4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 9, ease: 'power1.inOut', immediateRender: true }, 106);
-  tl.fromTo('.sc4 .bg', { scale: 1.3 }, { scale: 1, duration: 18 }, 106);
-  show('.sc4 .f-top .rv', 113, 5);
-  hide('.sc4 .f-top .rv', 125, 4);
-  show('.sc4 .panel', 128, 5, false);
-  tl.to({}, { duration: 8 }, 133);          // rests on the finale
+  // beat 3 → 4 : an ivory page sweeps in, the church rises, engagement details
+  hide('.sc2 .t2', 30, 2.5);
+  tl.fromTo('#s3', { clipPath: 'inset(0% 0% 0% 100%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 8, ease: 'power2.inOut' }, 31);
+  tl.fromTo('.sc3 .church', { y: 140, scale: 0.8, autoAlpha: 0 }, { y: 0, scale: 1, autoAlpha: 1, duration: 8, ease: 'power2.out', immediateRender: true }, 32);
+  show('.sc3 .ta .rv', 35, 2.5, 0.4);
+
+  // beat 4 → 5 : wedding ceremony details
+  hide('.sc3 .ta .rv', 40, 2.2);
+  show('.sc3 .tb .rv', 44, 2.5, 0.4);
+
+  // beat 5 → 6 : dissolve to the garden swing
+  hide('.sc3 .tb .rv', 50, 2.2);
+  tl.to('.sc3 .church', { y: -60, scale: 1.06, autoAlpha: 0, duration: 4, ease: 'power1.in' }, 50);
+  tl.fromTo('#s4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 7, ease: 'power1.inOut', immediateRender: true }, 51);
+  tl.fromTo('.sc4 .bg', { scale: 1.3 }, { scale: 1, duration: 9 }, 51);
+  show('.sc4 .f-top .rv', 55.5, 2.5, 0.6);
+
+  // beat 6 → 7 → 8 : families and best wishes, then contacts
+  hide('.sc4 .f-top .rv', 60, 2.2);
+  show('.sc4 .p1', 64.5, 4.5);
+  hide('.sc4 .p1', 70, 2.5);
+  show('.sc4 .p2', 74.5, 4.5);
+  tl.to('#fx', { opacity: 0.12, duration: 3 }, 61);   // keep petals off the names and phone numbers
+  tl.to({}, { duration: 0 }, 80);            // timeline ends exactly on the last beat
+
+  // "Please scroll the screen" button glides to the next page for anyone who prefers tapping
+  function goNext() {                        // behaves like a small swipe: the snapping glides to the next page
+    var o = { y: window.pageYOffset }, to = o.y + 80;
+    g.to(o, { y: to, duration: 0.25, ease: 'power1.out', onUpdate: function () { window.scrollTo(0, o.y); } });
+  }
+  document.getElementById('cue').addEventListener('click', goNext);
 
   // ---------- intro (plays when the gate opens) ----------
-  g.set(['.sc0 .bgw', '.sc0 .copy', '.sc0 .cue'], { opacity: 0 });
+  g.set(['.sc0 .bgw', '.sc0 .copy', '.sc0 .cuew'], { opacity: 0 });
   g.set('.sc0 .nm', { clipPath: 'inset(-20% 100% -20% -10%)' });
   var played = false;
   window.__intro = function () {
@@ -378,26 +458,23 @@ a{color:inherit}
       .to('.sc0 .nm', { clipPath: 'inset(-20% -10% -20% -10%)', duration: 1.8, stagger: 0.45, ease: 'power2.inOut' }, 1.1)
       .from('.sc0 .amp', { scale: 0.4, opacity: 0, duration: 1, ease: 'back.out(2)' }, 1.5)
       .from('.sc0 .sub', { y: 20, opacity: 0, duration: 1.2, ease: 'expo.out' }, 2.3)
-      .to('.sc0 .cue', { opacity: 1, duration: 1 }, 3);
+      .to('.sc0 .cuew', { opacity: 1, duration: 1 }, 3);
   };
 
   // ---------- fluid extras ----------
-  // gentle pointer parallax on the artwork (desktop)
   if (window.matchMedia('(pointer:fine)').matches) {
     var qx = [], qy = [];
-    all('.bgw').forEach(function (el, i) { qx[i] = g.quickTo(el, 'x', { duration: 1.2, ease: 'power3' }); qy[i] = g.quickTo(el, 'y', { duration: 1.2, ease: 'power3' }); });
+    document.querySelectorAll('.bgw').forEach(function (el, i) { qx[i] = g.quickTo(el, 'x', { duration: 1.2, ease: 'power3' }); qy[i] = g.quickTo(el, 'y', { duration: 1.2, ease: 'power3' }); });
     window.addEventListener('pointermove', function (e) {
       var nx = e.clientX / innerWidth - 0.5, ny = e.clientY / innerHeight - 0.5;
       qx.forEach(function (q, i) { q(nx * -14); qy[i](ny * -14); });
     });
   }
-  // the swing rocks gently
   g.fromTo('.sc4 .bgw', { rotation: -0.45 }, { rotation: 0.45, transformOrigin: '50% 0%', duration: 3.4, ease: 'sine.inOut', repeat: -1, yoyo: true });
 
   // ---------- falling petals and golden dust ----------
-  var fx = { boost: 0 };
   (function () {
-    var c = $('#fx'), x = c.getContext('2d'), W, H, dpr, P = [];
+    var c = document.getElementById('fx'), x = c.getContext('2d'), W, H, dpr, P = [];
     var cols = ['rgba(255,255,255,.9)', 'rgba(250,226,222,.9)', 'rgba(236,184,184,.8)', 'rgba(255,244,226,.9)'];
     function size() { dpr = Math.min(window.devicePixelRatio || 1, 2); W = c.width = Math.round(innerWidth * dpr); H = c.height = Math.round(innerHeight * dpr); }
     function make(init) {
@@ -405,20 +482,19 @@ a{color:inherit}
       return { dust: dust, x: Math.random() * W, y: init ? Math.random() * H : -20 * dpr, s: (dust ? 1.2 + Math.random() * 2 : 5 + Math.random() * 8) * dpr, vy: (0.3 + Math.random() * 0.7) * dpr, vx: (Math.random() - 0.5) * 0.4 * dpr, r: Math.random() * 6.28, vr: (Math.random() - 0.5) * 0.04, sw: Math.random() * 6.28, col: dust ? 'rgba(236,205,130,' : cols[(Math.random() * cols.length) | 0] };
     }
     size();
-    var n = innerWidth < 700 ? 30 : 52;
+    var n = innerWidth < 700 ? 24 : 44;
     for (var i = 0; i < n; i++) P.push(make(true));
     window.addEventListener('resize', size);
     var t = 0;
     g.ticker.add(function () {
       t += 0.016; x.clearRect(0, 0, W, H);
-      var rate = 1 + fx.boost * 2.2;
+      var rate = 1 + fx.boost * 1.6;
       for (var i = 0; i < P.length; i++) {
         var p = P[i];
         p.y += p.vy * rate; p.sw += 0.02; p.x += (p.vx + Math.sin(p.sw) * 0.5 * dpr) * rate; p.r += p.vr * rate;
         if (p.y > H + 20 * dpr) P[i] = make(false);
         if (p.dust) {
-          var a = 0.35 + 0.35 * Math.sin(t * 3 + i);
-          x.fillStyle = p.col + a + ')'; x.beginPath(); x.arc(p.x, p.y, p.s, 0, 6.283); x.fill();
+          x.fillStyle = p.col + (0.35 + 0.35 * Math.sin(t * 3 + i)) + ')'; x.beginPath(); x.arc(p.x, p.y, p.s, 0, 6.283); x.fill();
         } else {
           x.save(); x.translate(p.x, p.y); x.rotate(p.r); x.scale(1, 0.62 + 0.38 * Math.sin(p.sw * 1.7));
           x.fillStyle = p.col; x.beginPath(); x.ellipse(0, 0, p.s, p.s * 0.58, 0, 0, 6.283); x.fill(); x.restore();
@@ -433,7 +509,7 @@ a{color:inherit}
 })();
 </script>
 
-<!-- Background music: put music.mp3 next to index.html. The button stays hidden until that file exists. -->
+<!-- Background music: music.mp3 sits next to index.html. The speaker button shows once the file exists. -->
 <audio id="bgm" src="music.mp3" loop preload="auto"></audio>
 <button id="musicBtn" type="button" aria-label="Music on/off">&#128263;</button>
 <script>

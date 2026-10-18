@@ -3,27 +3,22 @@
 A scroll-driven Christian wedding reception invitation. Static site: open `index.html`, or deploy the folder as-is (Vercel, Netlify, GitHub Pages).
 
 ## The scroll story
-One pinned stage; each scroll "page" opens onto the next scene:
+Nine pages, one swipe each (the scroll snaps, so a short flick glides to the next page; the "Please scroll the screen" button on page 1 does the same):
 
-1. **Arch by the lake** – names write themselves in, then the camera pushes through the floral arch
-2. **The rings** – the doorway opens onto the rings on the Bible, with the invitation wording and Ecclesiastes 4:9
-3. **The aisle** – an iris opens onto the candle-lit church; "a cord of three strands", then the date card with live countdown
-4. **The church** – an ivory page sweeps in and the watercolor church rises; venue, time, directions
-5. **The swing** – dissolve to the garden swing; the families, hashtag, share / RSVP
+1. **Arch by the lake** – names write themselves in
+2. **The rings** – the camera pushes through the arch; engagement wording, full names, Ecclesiastes 4:9
+3. **The aisle** – an iris opens onto the church; "a cord of three strands…"
+4. **Save the date** – date card with live countdown
+5. **The engagement venue** – ivory page, watercolor church, Directions
+6. **The wedding ceremony venue** – CSI All Saints Church, Directions
+7. **The swing** – "Forever begins here"
+8. **Families & best wishes**
+9. **Contacts** (tap to call), hashtag, Share on WhatsApp
 
-Also: an "Open Invitation" gate (lets phones start the music), falling petals and gold dust that speed up as you scroll, pointer parallax on desktop, a progress bar, and a reduced-motion fallback (plain stacked sections).
+Also: "Open Invitation" gate (lets phones start the music), petals and gold dust, pointer parallax on desktop, reduced-motion fallback (plain stacked sections).
 
 ## Edit the details
-Everything is in the `inv-config` JSON block near the bottom of `index.html`:
-
-```json
-{"groomName":"Alfred","brideName":"Bride","eventDate":"2026-12-19T18:00","venueName":"Venue Name",
- "venueAddress":"...","mapLink":"","dinnerTime":"07:30 PM","hashtag":"#Alfred_Weds_Bride",
- "groomFather":"...","groomMother":"...","brideFather":"...","brideMother":"...","rsvpPhone":""}
-```
-- `mapLink` empty → the Directions button is hidden. `rsvpPhone` empty → the RSVP button is hidden.
-- `couplePhoto`: path to the couple's photo (e.g. `assets/couple.jpg`, portrait 3:4 works best). Empty → the watercolor arch is shown on the opening screen.
-- `eventDate` is local time (`YYYY-MM-DDTHH:mm`) and drives the date card, countdown and WhatsApp share text.
+Everything is in the `inv-config` JSON block near the bottom of `index.html` (names, date, venues + map links, parents, best wishes, phone numbers, hashtag, `couplePhoto`). `eventDate` is local time `YYYY-MM-DDTHH:mm` and drives the date card, countdown and WhatsApp share text. Set `weddingNote` to the wedding date/time once known.
 
 ## Music (optional)
 `music.mp3` ("Before the Altar") plays after the guest taps Open Invitation. Replace the file to change the song.
