@@ -14,7 +14,7 @@ Seven pages, one swipe each (scrolling snaps, so a short flick glides to the nex
 7. **Families, best wishes, hashtag, Share on WhatsApp**
 
 ## Edit the details
-Everything is in the `inv-config` JSON block near the bottom of `index.html`: names, the `events` list (name, date `YYYY-MM-DDTHH:mm`, venue, place, map link), parents, best wishes, hashtag, `couplePhoto`. The first event drives the date card and countdown.
+Everything is in the `inv-config` JSON block near the bottom of `index.html`: names, the `events` list (name, date `YYYY-MM-DDTHH:mm`, venue, place, map link), parents, best wishes, hashtag, `couplePhoto`. The second event (the wedding ceremony) drives the date card and countdown.
 
 ## Music (optional)
 `music.mp3` ("Before the Altar") plays after the guest taps Open Invitation. Replace the file to change the song.

@@ -231,11 +231,11 @@ q{text-wrap:balance}
     <q class="rv">The LORD bless thee, and keep thee.</q>
     <p class="lab ref rv">Numbers 6:24</p>
   </div>
-  <div class="t2 glass rb" aria-label="Date of the engagement">
+  <div class="t2 glass rb" aria-label="Date of the wedding">
     <p class="lab">Save the date</p>
     <div class="dateline"><span class="wd" data-t="weekday"></span><span class="dd" data-t="day"></span><span class="my" data-t="monthYear"></span></div>
-    <p class="tm">Engagement at <span data-t="time"></span></p>
-    <div class="cd" aria-label="Countdown to the engagement">
+    <p class="tm">Wedding at <span data-t="time"></span></p>
+    <div class="cd" aria-label="Countdown to the wedding">
       <div><b data-cd="d">00</b><span>Days</span></div>
       <div><b data-cd="h">00</b><span>Hours</span></div>
       <div><b data-cd="m">00</b><span>Min</span></div>
@@ -298,7 +298,7 @@ q{text-wrap:balance}
 /* ---------- data ---------- */
 (function () {
   var C = JSON.parse(document.getElementById('inv-config').textContent);
-  var E = C.events, first = E[0];
+  var E = C.events, first = E[1] || E[0];   // the countdown and date card follow the wedding ceremony
   var d = new Date(first.date), ok = !isNaN(d.getTime());
   var fmt = function (iso, o, loc) { var x = new Date(iso); if (isNaN(x.getTime())) return ''; try { return x.toLocaleDateString(loc || 'en-GB', o); } catch (e) { return ''; } };
   var tfmt = function (iso) { var x = new Date(iso); if (isNaN(x.getTime())) return ''; try { return x.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }); } catch (e) { return ''; } };
