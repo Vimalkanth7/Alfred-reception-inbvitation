@@ -27,6 +27,7 @@
 :root{--ivory:#FBF6EC;--cream:#F3EAD9;--gold:#B8913F;--gold-hi:#EBD59A;--gold-dk:#7A5A14;--ink:#33291F;--slate:#2F4458;--rose:#7A3F4D;--night:#1B130C}
 *{box-sizing:border-box}
 html{background:#E9E0CF}
+html{font-variant-numeric:lining-nums}
 body{margin:0;min-height:100svh;font-family:Jost,'Segoe UI',sans-serif;color:var(--ink);background:radial-gradient(120% 90% at 50% 0%,#F7EFE0 0%,#E7DDC9 60%,#D8E1DC 100%);-webkit-font-smoothing:antialiased}
 a{color:inherit}
 ul{list-style:none;margin:0;padding:0}
@@ -76,11 +77,13 @@ ul{list-style:none;margin:0;padding:0}
 
 /* ---------- 2 · the rings ---------- */
 .sc1 .veil{background:linear-gradient(180deg,rgba(28,17,8,.78) 0%,rgba(28,17,8,.3) 32%,rgba(28,17,8,0) 46%,rgba(28,17,8,.55) 66%,rgba(28,17,8,.88) 100%)}
-.sc1 .t1{top:7.5%;gap:3cqw}
+.sc1 .t1{top:10%;gap:3cqw}
+.sc1 .t1 q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6.8cqw;line-height:1.2;color:#FFF8EA;text-shadow:0 2px 14px rgba(0,0,0,.85),0 0 3cqw rgba(0,0,0,.5)}
+.sc1 .t1 q::before{content:'\201C'}.sc1 .t1 q::after{content:'\201D'}
 .sc1 .lab{color:var(--gold-hi);font-weight:600}
-.sc1 .t1 p.big{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6.6cqw;line-height:1.22;color:#FFF8EA;text-shadow:0 2px 14px rgba(0,0,0,.7)}
-.sc1 .t2{bottom:6%;gap:2.4cqw}
-.sc1 .names2{margin:0;font-family:'Pinyon Script',cursive;font-size:14cqw;line-height:1;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.7)}
+.sc1 .t2 p.big{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:5.9cqw;line-height:1.2;color:#FFF8EA;text-shadow:0 2px 14px rgba(0,0,0,.8)}
+.sc1 .t2{bottom:5%;gap:2.2cqw}
+.sc1 .names2{margin:0;font-family:'Pinyon Script',cursive;font-size:13cqw;line-height:1;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.7)}
 .sc1 .names2 i{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:.5em;color:var(--gold-hi);padding:0 .25em}
 .sc1 .full{display:flex;flex-direction:column;gap:.8cqw;margin:0;font-family:Jost,sans-serif;font-weight:500;font-size:3.3cqw;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);text-shadow:0 1px 10px rgba(0,0,0,.8)}
 .sc1 .t2 q{quotes:none;margin-top:1.4cqw;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:5.6cqw;line-height:1.25;color:#FFF8EA;text-shadow:0 2px 14px rgba(0,0,0,.8)}
@@ -89,6 +92,7 @@ ul{list-style:none;margin:0;padding:0}
 /* ---------- 3 · the aisle ---------- */
 .sc2 .veil{background:linear-gradient(180deg,rgba(25,15,5,.3) 0%,rgba(25,15,5,0) 22%,rgba(25,15,5,.1) 45%,rgba(25,15,5,.84) 100%)}
 .sc2 .t1{bottom:8%;gap:3.2cqw}
+.sc2 .t1 q::before{content:'\201C'}.sc2 .t1 q::after{content:'\201D'}
 .sc2 .t1 q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:9cqw;line-height:1.1;color:#FFF8EA;text-shadow:0 2px 18px rgba(0,0,0,.85),0 0 3cqw rgba(0,0,0,.5)}
 .sc2 .t1 .ref{color:var(--gold-hi);font-weight:600}
 .glass{background:linear-gradient(180deg,rgba(40,26,12,.52),rgba(40,26,12,.4));border:1px solid rgba(235,213,154,.7);border-radius:6cqw;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
@@ -101,7 +105,7 @@ ul{list-style:none;margin:0;padding:0}
 .sc2 .tm{margin:0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:5.6cqw;color:#FFF8EA}
 .cd{display:flex;gap:2.4cqw;justify-content:center;margin-top:2cqw}
 .cd div{min-width:15cqw;padding:2.4cqw 1cqw 2cqw;border-radius:3cqw;border:1px solid rgba(235,213,154,.6);background:rgba(20,12,4,.4);display:flex;flex-direction:column;align-items:center;gap:1cqw}
-.cd b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:7.8cqw;line-height:1;color:#fff}
+.cd b{font-family:Jost,sans-serif;font-weight:500;font-size:6.6cqw;line-height:1;color:#fff;font-variant-numeric:lining-nums tabular-nums;letter-spacing:.02em}
 .cd span{font-size:2.3cqw;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-hi)}
 
 /* ---------- 4 · the schedule (one clear page for all three events) ---------- */
@@ -130,8 +134,9 @@ html:not(.anim) .sc3 .church{height:80cqw}
 .sc4 .veil{background:linear-gradient(180deg,rgba(255,250,246,0) 0%,rgba(255,250,246,0) 60%,rgba(255,248,244,.35) 100%)}
 .sc4 .f-top{top:11%;gap:2.4cqw;padding:7cqw 4cqw;isolation:isolate}
 .sc4 .f-top::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(closest-side,rgba(255,250,246,.95) 0%,rgba(255,250,246,.82) 55%,rgba(255,250,246,0) 100%)}
-.sc4 .f-top .script{margin:0;font-family:'Pinyon Script',cursive;font-size:11.5cqw;line-height:1;white-space:nowrap;color:#6A2F3D;text-shadow:0 0 5cqw rgba(255,255,255,.98),0 0 2cqw rgba(255,255,255,.95)}
-.sc4 .f-top p.s{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:5.4cqw;line-height:1.25;color:#4F2E37;text-shadow:0 0 4cqw rgba(255,255,255,.98),0 0 1.5cqw rgba(255,255,255,.9)}
+.sc4 .f-top q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:7.4cqw;line-height:1.18;color:#4A2530;text-shadow:0 0 5cqw rgba(255,255,255,.98),0 0 2cqw rgba(255,255,255,.95)}
+.sc4 .f-top q::before{content:'\201C'}.sc4 .f-top q::after{content:'\201D'}
+.sc4 .f-top .ref{color:var(--gold-dk);font-weight:600;text-shadow:0 0 3cqw rgba(255,255,255,.95)}
 .sc4 .panel{left:4.5cqw;right:4.5cqw;top:4.5%;padding:5.5cqw 4cqw 5cqw;border-radius:6cqw;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3cqw;background:linear-gradient(180deg,rgba(255,252,247,.92),rgba(255,247,242,.95));border:1px solid rgba(184,145,63,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 50px rgba(122,63,77,.25)}
 .panel h3{margin:0 0 1.6cqw;font-family:Jost,sans-serif;font-weight:600;font-size:2.6cqw;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-dk)}
 .fam{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;width:100%}
@@ -143,6 +148,7 @@ html:not(.anim) .sc3 .church{height:80cqw}
 .panel .with{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:4.8cqw;line-height:1.25;color:var(--rose)}
 .panel .end{width:100%;border-top:1px solid rgba(184,145,63,.5);padding-top:3cqw;display:flex;flex-direction:column;align-items:center;gap:2.4cqw}
 
+q{text-wrap:balance}
 /* ---------- chrome ---------- */
 .prog{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#B8913F,#F4E4B4);z-index:80;display:none}
 .anim .prog{display:block}
@@ -206,13 +212,14 @@ html:not(.anim) .sc3 .church{height:80cqw}
   <div class="bgw"><img class="bg" src="assets/rings.webp" alt="Two gold rings resting on an open Bible"></div>
   <div class="veil"></div>
   <div class="copy t1">
-    <p class="lab rv">Together with their families</p>
-    <p class="big rv">request the honour of your presence at the engagement of</p>
+    <q class="rv">Blessed is every one that feareth the LORD; that walketh in his ways.</q>
+    <p class="lab ref rv">Psalm 128:1</p>
   </div>
   <div class="copy t2">
+    <p class="lab rv">Together with their families</p>
+    <p class="big rv">request the honour of your presence at the engagement of</p>
     <p class="names2 rv"><span data-t="groom"></span><i>&amp;</i><span data-t="bride"></span></p>
     <p class="full rv"><span data-t="groomFull"></span><span>&amp; <span data-t="brideFull"></span></span></p>
-    <q class="rv">Love is patient, love is kind, and love never fails.</q>
   </div>
 </section>
 
@@ -221,7 +228,8 @@ html:not(.anim) .sc3 .church{height:80cqw}
   <div class="bgw"><img class="bg" src="assets/aisle.webp" alt="A candle-lit church aisle lined with white roses"></div>
   <div class="veil"></div>
   <div class="copy t1">
-    <q class="rv">What God has joined together, let no one separate.</q>
+    <q class="rv">The LORD bless thee, and keep thee.</q>
+    <p class="lab ref rv">Numbers 6:24</p>
   </div>
   <div class="t2 glass rb" aria-label="Date of the engagement">
     <p class="lab">Save the date</p>
@@ -249,8 +257,8 @@ html:not(.anim) .sc3 .church{height:80cqw}
   <div class="bgw"><img class="bg" src="assets/swing.webp" alt="A floral garden swing"></div>
   <div class="veil"></div>
   <div class="copy f-top">
-    <p class="script rv">Forever begins here</p>
-    <p class="s rv">Your presence is the blessing we wish for</p>
+    <q class="rv">The LORD hath done great things for us; whereof we are glad.</q>
+    <p class="lab ref rv">Psalm 126:3</p>
   </div>
   <div class="panel p1 rb">
     <div class="fam">
@@ -385,8 +393,8 @@ html:not(.anim) .sc3 .church{height:80cqw}
   tl.to('.sc0 .bg', { opacity: 0, duration: 5, ease: 'power1.in' }, 1);          // arch melts into the pale mist first
   tl.fromTo('#s1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 5, ease: 'power1.out' }, 4.5);  // then the rings fade up
   tl.fromTo('.sc1 .bg', { scale: 1.16 }, { scale: 1.02, duration: 12 }, 1);
-  show('.sc1 .t1 .rv', 6, 2.5, 0.45);
-  show('.sc1 .t2 .rv', 6.6, 2.5, 0.4);
+  show('.sc1 .t1 .rv', 5.5, 2.5, 0.5);
+  show('.sc1 .t2 .rv', 6.2, 2.5, 0.4);
 
   // beat 1 → 2 : an iris opens onto the church aisle
   hide('.sc1 .rv', 10, 2.5);
