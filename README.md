@@ -27,3 +27,6 @@ assets/js/            gsap + ScrollTrigger (local copies)
 assets/fonts/         Cormorant Garamond, Jost, Pinyon Script (self-hosted)
 preview.jpg           social share image (set og:image to the full https URL once deployed)
 ```
+
+## Pictures
+The five scene images in `assets/` were upscaled 2x with an ESRGAN super-resolution model, then each background was extended at the top and bottom (soft, blurred continuation of its own edges) so the full width of every picture always shows on any phone; only the extension can ever be cropped. If higher-resolution originals are available, drop them in and re-run the same steps.

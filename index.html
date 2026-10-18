@@ -44,7 +44,7 @@ ul{list-style:none;margin:0;padding:0}
 /* default (no JS / reduced motion): scenes stack as ordinary sections */
 .scene{position:relative;min-height:177cqw;overflow:hidden;color:var(--ivory);display:flex;flex-direction:column;justify-content:center;gap:6cqw;padding:10cqw 0}
 .bgw{position:absolute;inset:-2%}
-.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transform:translateZ(0)}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transform:translateZ(0);will-change:transform,opacity;backface-visibility:hidden}
 .veil{position:absolute;inset:0;pointer-events:none}
 .copy{position:relative;text-align:center;padding:0 7cqw;display:flex;flex-direction:column;align-items:center}
 .panel,.t2,.church{position:relative}
@@ -60,13 +60,14 @@ ul{list-style:none;margin:0;padding:0}
 
 /* ---------- 1 · arch by the lake ---------- */
 .sc0{color:var(--slate);background:#E9F0EE}
-.sc0 .bg{object-position:47% 60%;transform-origin:47% 62%}
+.sc0 .bg{object-position:50% 93%;transform-origin:50% 75%}
 .sc0 .veil{background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.22) 36%,rgba(255,255,255,0) 52%)}
 .sc0 .copy{top:6.5%;gap:2cqw}
 .sc0 .lab{color:var(--gold-dk);font-weight:600;font-size:3.2cqw}
 .names{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.9;text-shadow:0 0 5cqw rgba(255,255,255,.95),0 0 1.6cqw rgba(255,255,255,.9)}
 .names .nm{display:block;font-family:'Pinyon Script',cursive;font-size:21cqw;color:var(--slate);padding:0 4cqw}
 .names .amp{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:8.5cqw;color:#9A7424;margin:-1cqw 0}
+.sc0 .sub small{display:block;margin-top:1.6cqw;font:600 3.7cqw/1.3 Jost,sans-serif;font-style:normal;letter-spacing:.08em;color:var(--slate)}
 .sc0 .sub{margin:2cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:5.3cqw;color:var(--slate);text-shadow:0 0 3cqw rgba(255,255,255,.95),0 0 1cqw rgba(255,255,255,.9)}
 .cuew{position:absolute;left:0;right:0;bottom:4.5%;justify-content:center;pointer-events:none}
 .cue{pointer-events:auto;display:flex;align-items:center;gap:2.4cqw;padding:2.6cqw 5.4cqw 2.6cqw 6cqw;border-radius:99px;border:1px solid rgba(184,145,63,.8);background:rgba(255,255,255,.94);color:var(--slate);box-shadow:0 10px 28px rgba(40,60,40,.28);font:600 3.9cqw/1.1 Jost,sans-serif;letter-spacing:.04em;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}
@@ -105,9 +106,9 @@ ul{list-style:none;margin:0;padding:0}
 
 /* ---------- 4 · the schedule (one clear page for all three events) ---------- */
 .sc3{background:radial-gradient(90% 60% at 50% 25%,#FFFCF4 0%,#F6EEDD 70%,#EDE2CC 100%);color:var(--ink)}
-.sc3 .church{left:2%;right:2%;top:2%;height:43%;display:flex;align-items:center;justify-content:center}
+.sc3 .church{left:2%;right:2%;top:1.5%;height:47%;display:flex;align-items:center;justify-content:center}
 html:not(.anim) .sc3 .church{height:80cqw}
-.sc3 .church img{max-width:100%;max-height:100%;object-fit:contain;display:block;filter:drop-shadow(0 14px 20px rgba(120,90,40,.2))}
+.sc3 .church img{max-width:100%;max-height:100%;object-fit:contain;display:block}
 .sched{position:relative;display:flex;flex-direction:column;gap:3cqw;padding:0 5cqw}
 .anim .sched{position:absolute;left:0;right:0;bottom:3.5%}
 .sched .hd{text-align:center;color:var(--gold-dk);font-weight:600;margin-bottom:.5cqw}
@@ -155,7 +156,7 @@ html:not(.anim) .sc3 .church{height:80cqw}
 #gate .g-cross{width:30px;color:var(--gold)}
 #gate .g-lab{font:600 12px/1 Jost,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-dk)}
 #gate .g-photo{width:min(190px,44vw);aspect-ratio:3/4;border-radius:999px 999px 14px 14px;overflow:hidden;box-shadow:0 0 0 2px var(--gold),0 0 0 8px rgba(251,246,236,.9),0 0 0 9px rgba(184,145,63,.5),0 24px 50px rgba(90,60,10,.28);margin:4px 0}
-#gate .g-photo img{width:100%;height:100%;object-fit:cover;object-position:47% 62%;display:block;animation:gz 9s ease-in-out infinite alternate}
+#gate .g-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 86%;display:block;animation:gz 9s ease-in-out infinite alternate}
 @keyframes gz{from{transform:scale(1)}to{transform:scale(1.14)}}
 #gate .g-names{font-family:'Pinyon Script',cursive;font-size:clamp(46px,14vw,70px);line-height:1;color:var(--slate)}
 #gate .g-names i{font:italic 600 .42em 'Cormorant Garamond',serif;color:#9A7424;padding:0 .3em}
@@ -173,7 +174,7 @@ html:not(.anim) .sc3 .church{height:80cqw}
 <!-- Welcome gate: the guest's tap on "Open Invitation" is what lets the phone start the music -->
 <div id="gate" role="dialog" aria-label="Open the invitation">
   <svg class="g-cross" viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M12 2v28M4 10h16"/></svg>
-  <span class="g-lab">Engagement Ceremony</span>
+  <span class="g-lab">Wedding Ceremony</span>
   <div class="g-photo"><img src="assets/hero-arch.webp" alt=""></div>
   <div class="g-names"><span data-t="groom"></span> <i>&amp;</i> <span data-t="bride"></span></div>
   <div class="g-date" data-t="gateDate"></div>
@@ -193,9 +194,9 @@ html:not(.anim) .sc3 .church{height:80cqw}
   <div class="bgw"><img class="bg" src="assets/hero-arch.webp" alt="A couple standing beneath a floral wedding arch beside a lake"></div>
   <div class="veil"></div>
   <div class="copy">
-    <p class="lab rv">Engagement Ceremony</p>
+    <p class="lab rv">Wedding Ceremony</p>
     <h1 class="names rv"><span class="nm" data-t="groom"></span><span class="amp">&amp;</span><span class="nm" data-t="bride"></span></h1>
-    <p class="sub rv" data-t="dateFull"></p>
+    <p class="sub rv"><span data-t="wedDay"></span><small data-t="wedWhere"></small></p>
   </div>
   <div class="cuew"><button class="cue rv" type="button" id="cue" aria-label="Scroll to continue"><span>Please scroll the screen</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div>
 </section>
@@ -299,7 +300,9 @@ html:not(.anim) .sc3 .church{height:80cqw}
     weekday: weekday, dateLong: dateLong, dateFull: weekday + ', ' + dateLong, time: time,
     day: ok ? String(d.getDate()).padStart(2, '0') : '00',
     monthYear: fmt(first.date, { month: 'long', year: 'numeric' }),
-    gateDate: weekday + ' · ' + dateLong,
+    gateDate: fmt(E[1].date, { weekday: 'long' }) + ' · ' + fmt(E[1].date, { day: 'numeric', month: 'long', year: 'numeric' }) + ' · ' + tfmt(E[1].date),
+    wedDay: fmt(E[1].date, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }),
+    wedWhere: tfmt(E[1].date) + ' · ' + E[1].venue,
     hashtag: C.hashtag, groomParents: C.groomParents, brideParents: C.brideParents
   };
   document.querySelectorAll('[data-t]').forEach(function (el) { var v = V[el.getAttribute('data-t')]; if (v != null) el.textContent = v; });
@@ -369,8 +372,8 @@ html:not(.anim) .sc3 .church{height:80cqw}
     defaults: { ease: 'none' },
     scrollTrigger: {
       trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 5.3); },
-      pin: true, anticipatePin: 1, scrub: 0.8, invalidateOnRefresh: true,
-      snap: { snapTo: 'labelsDirectional', duration: { min: 0.5, max: 1.3 }, delay: 0.1, ease: 'power2.inOut' },
+      pin: true, anticipatePin: 1, scrub: 1, invalidateOnRefresh: true,
+      snap: { snapTo: 'labelsDirectional', duration: { min: 0.7, max: 1.5 }, delay: 0.08, ease: 'power3.inOut' },
       onUpdate: function (s) { g.set('.prog', { scaleX: s.progress }); fx.boost = Math.min(4, Math.abs(s.getVelocity()) / 900); }
     }
   });
@@ -452,13 +455,13 @@ html:not(.anim) .sc3 .church{height:80cqw}
   (function () {
     var c = document.getElementById('fx'), x = c.getContext('2d'), W, H, dpr, P = [];
     var cols = ['rgba(255,255,255,.9)', 'rgba(250,226,222,.9)', 'rgba(236,184,184,.8)', 'rgba(255,244,226,.9)'];
-    function size() { dpr = Math.min(window.devicePixelRatio || 1, 2); W = c.width = Math.round(innerWidth * dpr); H = c.height = Math.round(innerHeight * dpr); }
+    function size() { dpr = Math.min(window.devicePixelRatio || 1, 1.5); W = c.width = Math.round(innerWidth * dpr); H = c.height = Math.round(innerHeight * dpr); }
     function make(init) {
       var dust = Math.random() < 0.35;
       return { dust: dust, x: Math.random() * W, y: init ? Math.random() * H : -20 * dpr, s: (dust ? 1.2 + Math.random() * 2 : 5 + Math.random() * 8) * dpr, vy: (0.3 + Math.random() * 0.7) * dpr, vx: (Math.random() - 0.5) * 0.4 * dpr, r: Math.random() * 6.28, vr: (Math.random() - 0.5) * 0.04, sw: Math.random() * 6.28, col: dust ? 'rgba(236,205,130,' : cols[(Math.random() * cols.length) | 0] };
     }
     size();
-    var n = innerWidth < 700 ? 24 : 44;
+    var n = innerWidth < 700 ? 18 : 36;
     for (var i = 0; i < n; i++) P.push(make(true));
     window.addEventListener('resize', size);
     var t = 0;
@@ -510,8 +513,15 @@ html:not(.anim) .sc3 .church{height:80cqw}
     if (a.paused) { userMuted = false; play().catch(function () {}); } else { userMuted = true; a.pause(); }
   });
   var gate = document.getElementById('gate');
+  var ready = false, wantOpen = false;
+  var imgs = Array.prototype.slice.call(document.querySelectorAll('img.bg, .church img'));
+  var btn = gate.querySelector('.g-btn');
+  Promise.all(imgs.map(function (i) { return (i.decode ? i.decode() : Promise.resolve()).catch(function () {}); })).then(function () { ready = true; btn.textContent = 'Open Invitation'; if (wantOpen) openGate(); });
+  setTimeout(function () { if (!ready) { ready = true; btn.textContent = 'Open Invitation'; if (wantOpen) openGate(); } }, 9000);
+  btn.textContent = 'Loading…';
   function openGate(ev) {
     if (ev) ev.preventDefault();
+    if (!ready) { wantOpen = true; return; }
     if (!started && !userMuted && b.style.display === 'block') play().catch(function () {});
     gate.classList.add('gone');
     if (window.__intro) window.__intro();
