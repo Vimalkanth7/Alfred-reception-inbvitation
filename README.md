@@ -22,10 +22,11 @@ Everything is in the `inv-config` JSON block near the bottom of `index.html`:
  "groomFather":"...","groomMother":"...","brideFather":"...","brideMother":"...","rsvpPhone":""}
 ```
 - `mapLink` empty → the Directions button is hidden. `rsvpPhone` empty → the RSVP button is hidden.
+- `couplePhoto`: path to the couple's photo (e.g. `assets/couple.jpg`, portrait 3:4 works best). Empty → the watercolor arch is shown on the opening screen.
 - `eventDate` is local time (`YYYY-MM-DDTHH:mm`) and drives the date card, countdown and WhatsApp share text.
 
 ## Music (optional)
-Drop a `music.mp3` next to `index.html`. The speaker button appears automatically when the file exists.
+`music.mp3` ("Before the Altar") plays after the guest taps Open Invitation. Replace the file to change the song.
 
 ## Files
 ```

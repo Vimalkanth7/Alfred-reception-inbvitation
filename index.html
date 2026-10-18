@@ -256,7 +256,7 @@ a{color:inherit}
 </div>
 </main>
 
-<script id="inv-config" type="application/json">{"groomName":"Alfred","brideName":"Bride","eventDate":"2026-12-19T18:00","venueName":"Venue Name","venueAddress":"Church / hall address, City","mapLink":"","dinnerTime":"07:30 PM","hashtag":"#Alfred_Weds_Bride","groomFather":"Father's name","groomMother":"Mother's name","brideFather":"Father's name","brideMother":"Mother's name","rsvpPhone":""}</script>
+<script id="inv-config" type="application/json">{"groomName":"Alfred","brideName":"Bride","eventDate":"2026-12-19T18:00","venueName":"Venue Name","venueAddress":"Church / hall address, City","mapLink":"","dinnerTime":"07:30 PM","hashtag":"#Alfred_Weds_Bride","groomFather":"Father's name","groomMother":"Mother's name","brideFather":"Father's name","brideMother":"Mother's name","rsvpPhone":"","couplePhoto":""}</script>
 
 <script>
 /* ---------- data: everything the guest sees is driven by #inv-config ---------- */
@@ -288,6 +288,7 @@ a{color:inherit}
     var h = H[a.getAttribute('data-href')];
     if (h) { a.setAttribute('href', h); a.hidden = false; } else a.hidden = true;
   });
+  if (C.couplePhoto) document.querySelectorAll('#gate .g-photo img').forEach(function (i) { i.src = C.couplePhoto; });
   document.title = C.groomName + ' & ' + C.brideName + ' – Wedding Reception';
 
   // countdown
