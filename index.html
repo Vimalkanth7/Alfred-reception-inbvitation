@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alfred – Wedding Reception</title>
+<meta name="description" content="You are warmly invited to the wedding reception of Alfred.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alfred – Wedding Reception">
+<meta property="og:description" content="You are warmly invited to our wedding reception. Tap to open your invitation.">
+<meta property="og:image" content="preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF6EC">
+<link rel="preload" as="image" href="assets/hero-arch.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 32%27%3E%3Cpath d=%27M12 3v26M4 11h16%27 fill=%27none%27 stroke=%27%23B8913F%27 stroke-width=%273%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 500;font-display:swap;src:url(assets/fonts/CormorantGaramond-400i.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 500;font-display:swap;src:url(assets/fonts/CormorantGaramond-400.woff2) format('woff2')}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400 500;font-display:swap;src:url(assets/fonts/Jost-400.woff2) format('woff2')}
+@font-face{font-family:'Pinyon Script';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/PinyonScript-400.woff2) format('woff2')}
+
+:root{--ivory:#FBF6EC;--cream:#F3EAD9;--gold:#B8913F;--gold-hi:#E6CD8E;--ink:#3A3228;--slate:#3D4F5C;--rose:#7A4552;--night:#1B130C}
+*{box-sizing:border-box}
+html{background:#E9E0CF}
+body{margin:0;min-height:100svh;font-family:Jost,'Segoe UI',sans-serif;color:var(--ink);background:radial-gradient(120% 90% at 50% 0%,#F7EFE0 0%,#E7DDC9 60%,#D8E1DC 100%);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.script{font-family:'Pinyon Script','Snell Roundhand',cursive;font-weight:400}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.lab{font-family:Jost,sans-serif;font-weight:500;font-size:3cqw;letter-spacing:.36em;text-transform:uppercase;margin:0}
+.rule{display:flex;align-items:center;justify-content:center;gap:2.4cqw;color:var(--gold);margin:0}
+.rule i{display:block;width:12cqw;height:1px;background:currentColor;opacity:.7}
+.rule b{display:block;width:1.8cqw;height:1.8cqw;transform:rotate(45deg);border:1px solid currentColor}
+.cross{display:block;width:6cqw;height:auto;color:var(--gold)}
+
+/* ---------- frame: full-bleed on phones, a portrait "card" on wide screens ---------- */
+.story{position:relative}
+.stage{position:relative;width:100%}
+.frame{position:relative;width:min(100vw,calc(100svh * .6));margin:0 auto;overflow:hidden;container-type:inline-size;background:var(--night)}
+@media (min-aspect-ratio:4/5){.frame{box-shadow:0 30px 90px rgba(70,48,14,.35),0 0 0 1px rgba(184,145,63,.35)}}
+
+/* default (no JS / reduced motion): scenes stack as ordinary sections */
+.scene{position:relative;aspect-ratio:9/16;overflow:hidden;color:var(--ivory)}
+.bgw{position:absolute;inset:-2%}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.veil{position:absolute;inset:0;pointer-events:none}
+.copy{position:absolute;left:0;right:0;text-align:center;padding:0 8cqw;display:flex;flex-direction:column;align-items:center}
+
+/* animated mode: one pinned stage, scenes layered on top of each other */
+.anim .frame{height:100svh}
+.anim .scene{position:absolute;inset:0;aspect-ratio:auto}
+.anim .scene:not(.sc0){will-change:clip-path}
+
+/* ---------- 0 · arch by the lake ---------- */
+.sc0{color:var(--slate);background:#E9F0EE}
+.sc0 .bg{object-position:47% 60%;transform-origin:47% 62%}
+.sc0 .veil{background:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.18) 34%,rgba(255,255,255,0) 50%)}
+.sc0 .copy{top:7%;gap:2cqw}
+.sc0 .lab{color:#8A6A25}
+.names{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.9;text-shadow:0 0 5cqw rgba(255,255,255,.9),0 0 1.5cqw rgba(255,255,255,.8)}
+.names .nm{display:block;font-family:'Pinyon Script',cursive;font-size:21cqw;color:var(--slate);padding:0 4cqw}
+.names .amp{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:8.5cqw;color:#A8843F;margin:-1cqw 0}
+.sc0 .sub{margin:2cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:5.4cqw;color:var(--slate);text-shadow:0 0 3cqw rgba(255,255,255,.9)}
+.cue{position:absolute;left:0;right:0;bottom:4%;display:flex;flex-direction:column;align-items:center;gap:2.4cqw;color:#fff;text-shadow:0 1px 8px rgba(30,50,20,.55)}
+.cue .lab{font-size:2.6cqw}
+.cue i{display:block;width:1px;height:11cqw;background:linear-gradient(#fff,rgba(255,255,255,0));transform-origin:50% 0;animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- 1 · the rings ---------- */
+.sc1 .veil{background:linear-gradient(180deg,rgba(32,20,10,.68) 0%,rgba(32,20,10,.2) 34%,rgba(32,20,10,0) 48%,rgba(32,20,10,.5) 72%,rgba(32,20,10,.82) 100%)}
+.sc1 .t1{top:8%;gap:3cqw}
+.sc1 .t1 .lab{color:var(--gold-hi)}
+.sc1 .t1 p.big{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.6cqw;line-height:1.25;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.sc1 .t2{bottom:7%;gap:3cqw}
+.sc1 .t2 q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.2cqw;line-height:1.3;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.sc1 .t2 .ref{color:var(--gold-hi);font-size:2.8cqw}
+.sc1 .names2{margin:0;font-family:'Pinyon Script',cursive;font-size:13cqw;line-height:1;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.sc1 .names2 i{font-family:'Cormorant Garamond',serif;font-size:.5em;color:var(--gold-hi);padding:0 .25em}
+
+/* ---------- 2 · the aisle ---------- */
+.sc2 .veil{background:linear-gradient(180deg,rgba(25,15,5,.25) 0%,rgba(25,15,5,0) 22%,rgba(25,15,5,.05) 45%,rgba(25,15,5,.78) 100%)}
+.sc2 .t1{bottom:9%;gap:3.4cqw}
+.sc2 .t1 q{quotes:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9cqw;line-height:1.12;text-shadow:0 2px 18px rgba(0,0,0,.65)}
+.sc2 .t1 .ref{color:var(--gold-hi)}
+.glass{background:linear-gradient(180deg,rgba(251,246,236,.2),rgba(251,246,236,.08));border:1px solid rgba(230,205,142,.65);border-radius:6cqw;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.sc2 .t2{bottom:6%;left:6cqw;right:6cqw;padding:7cqw 5cqw 6cqw;gap:2.4cqw;position:absolute;text-align:center;display:flex;flex-direction:column;align-items:center;color:var(--ivory)}
+.sc2 .t2 .lab{color:var(--gold-hi)}
+.dateline{display:flex;align-items:flex-end;justify-content:center;gap:4cqw;line-height:1}
+.dateline .wd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.6cqw;padding-bottom:3cqw;writing-mode:horizontal-tb}
+.dateline .dd{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27cqw;line-height:.82;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.4)}
+.dateline .my{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6.6cqw;padding-bottom:3cqw}
+.sc2 .tm{margin:0;font-family:'Cormorant Garamond',serif;font-size:5.4cqw}
+.cd{display:flex;gap:2.4cqw;justify-content:center;margin-top:2cqw}
+.cd div{min-width:15cqw;padding:2.4cqw 1cqw 2cqw;border-radius:3cqw;border:1px solid rgba(230,205,142,.5);background:rgba(20,12,4,.35);display:flex;flex-direction:column;align-items:center;gap:1cqw}
+.cd b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:7.6cqw;line-height:1;color:#fff}
+.cd span{font-size:2.2cqw;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-hi)}
+
+/* ---------- 3 · the church ---------- */
+.sc3{background:radial-gradient(90% 60% at 50% 30%,#FFFCF4 0%,#F6EEDD 70%,#EDE2CC 100%);color:var(--ink)}
+.sc3 .church{position:absolute;left:6%;right:6%;top:2%;height:54%;display:flex;align-items:center;justify-content:center}
+.sc3 .church img{max-width:100%;max-height:100%;object-fit:contain;display:block;filter:drop-shadow(0 18px 24px rgba(120,90,40,.18))}
+.sc3 .copy{bottom:5%;gap:2.6cqw}
+.sc3 .lab{color:#8A6A25}
+.sc3 h2{margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:9.2cqw;line-height:1.05;color:var(--ink)}
+.sc3 .when{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:6cqw;color:var(--ink)}
+.sc3 .addr{margin:0;font-size:3.6cqw;line-height:1.5;color:#6B5E4D;max-width:78cqw}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:2cqw;min-height:12.4cqw;padding:0 7cqw;border-radius:99px;border:1px solid var(--gold);font-family:Jost,sans-serif;font-weight:500;font-size:3cqw;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:linear-gradient(180deg,#F4E4B4,#E0C275 55%,#C49A45);box-shadow:0 8px 24px rgba(120,86,20,.28);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn.ghost{background:rgba(255,255,255,.45);box-shadow:none}
+.btn svg{width:4.4cqw;height:4.4cqw}
+.acts{display:flex;flex-wrap:wrap;gap:3cqw;justify-content:center;margin-top:1cqw}
+
+/* ---------- 4 · the swing ---------- */
+.sc4{color:var(--rose)}
+.sc4 .bgw{inset:-4%}
+.sc4 .veil{background:linear-gradient(180deg,rgba(255,250,246,.0) 0%,rgba(255,250,246,.0) 60%,rgba(255,248,244,.35) 100%)}
+.sc4 .f-top{top:13%;gap:2.4cqw}
+.sc4 .f-top .script{margin:0;font-size:11cqw;white-space:nowrap;line-height:1;color:var(--rose);text-shadow:0 0 5cqw rgba(255,255,255,.95),0 0 2cqw rgba(255,255,255,.9)}
+.sc4 .f-top p{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:5.3cqw;line-height:1.25;color:#5C3A44;text-shadow:0 0 4cqw rgba(255,255,255,.95)}
+.sc4 .panel{position:absolute;left:5cqw;right:5cqw;top:5%;padding:5.5cqw 4cqw 5cqw;border-radius:6cqw;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3cqw;background:linear-gradient(180deg,rgba(255,252,247,.78),rgba(255,247,242,.9));border:1px solid rgba(184,145,63,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 50px rgba(122,69,82,.22)}
+.fam{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;width:100%}
+.fam h3{margin:0 0 1.6cqw;font-family:Jost,sans-serif;font-weight:500;font-size:2.5cqw;letter-spacing:.26em;text-transform:uppercase;color:#8A6A25}
+.fam p{margin:0;font-family:'Cormorant Garamond',serif;font-size:4.4cqw;line-height:1.25;color:var(--ink)}
+.panel .tag{margin:0;font-family:Jost,sans-serif;font-weight:500;font-size:3.1cqw;letter-spacing:.06em;color:#8A6A25;word-break:break-word}
+.panel .with{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:4.6cqw;color:var(--rose)}
+
+/* ---------- chrome ---------- */
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#B8913F,#F4E4B4);z-index:80;display:none}
+.anim .prog{display:block}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50;display:none}
+.anim #fx{display:block}
+#musicBtn{display:none;position:fixed;right:max(12px,env(safe-area-inset-right));top:calc(16px + env(safe-area-inset-top));z-index:9999;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:rgba(251,246,236,.82);color:var(--ink);font-size:18px;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent;backdrop-filter:blur(6px)}
+
+/* gate */
+#gate{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2svh;padding:24px;text-align:center;background:radial-gradient(120% 80% at 50% 25%,#FFFDF7 0%,#F3EAD9 60%,#E3D6BC 100%);color:var(--ink);touch-action:none;cursor:pointer;transition:opacity .9s ease,visibility .9s;-webkit-tap-highlight-color:transparent;container-type:inline-size}
+#gate.gone{opacity:0;visibility:hidden;pointer-events:none}
+#gate .g-cross{width:30px;color:var(--gold)}
+#gate .g-lab{font:500 12px/1 Jost,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#8A6A25}
+#gate .g-photo{width:min(190px,44vw);aspect-ratio:3/4;border-radius:999px 999px 14px 14px;overflow:hidden;box-shadow:0 0 0 2px var(--gold),0 0 0 8px rgba(251,246,236,.9),0 0 0 9px rgba(184,145,63,.5),0 24px 50px rgba(90,60,10,.28);margin:4px 0}
+#gate .g-photo img{width:100%;height:100%;object-fit:cover;object-position:47% 62%;display:block;animation:gz 9s ease-in-out infinite alternate}
+@keyframes gz{from{transform:scale(1)}to{transform:scale(1.14)}}
+#gate .g-names{font-family:'Pinyon Script',cursive;font-size:clamp(46px,14vw,70px);line-height:1;color:var(--slate)}
+#gate .g-names i{font:italic 500 .42em 'Cormorant Garamond',serif;color:#A8843F;padding:0 .3em}
+#gate .g-date{font:400 15px/1.4 Jost,sans-serif;color:#6B5E4D;letter-spacing:.1em}
+#gate .g-btn{margin-top:8px;min-height:54px;padding:0 34px;border-radius:999px;border:1px solid var(--gold);font:500 14px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:linear-gradient(180deg,#F4E4B4,#E0C275 55%,#C49A45);cursor:pointer;animation:gpulse 2.2s ease-in-out infinite}
+#gate .g-hint{font:400 12px/1 Jost,sans-serif;color:#8B7C66}
+@keyframes gpulse{0%,100%{box-shadow:0 0 0 0 rgba(184,145,63,.5)}50%{box-shadow:0 0 0 14px rgba(184,145,63,0)}}
+@media (prefers-reduced-motion:reduce){#gate .g-photo img,#gate .g-btn,.cue i{animation:none}}
+</style>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- Welcome gate: the guest's tap on "Open Invitation" is what lets the phone start the music -->
+<div id="gate" role="dialog" aria-label="Open the invitation">
+  <svg class="g-cross" viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M12 2v28M4 10h16"/></svg>
+  <span class="g-lab">Wedding Reception</span>
+  <div class="g-photo"><img src="assets/hero-arch.webp" alt=""></div>
+  <div class="g-names"><span data-t="groom">Alfred</span> <i>&amp;</i> <span data-t="bride">Bride</span></div>
+  <div class="g-date" data-t="gateDate"></div>
+  <button class="g-btn" type="button">Open Invitation</button>
+  <span class="g-hint">&#127925; with music</span>
+</div>
+
+<div class="prog" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<main class="story">
+<div class="stage">
+<div class="frame">
+
+<!-- 1 · Arch by the lake -->
+<section class="scene sc0" id="s0" aria-label="Opening">
+  <div class="bgw"><img class="bg" src="assets/hero-arch.webp" alt="A couple standing beneath a floral wedding arch beside a lake"></div>
+  <div class="veil"></div>
+  <div class="copy">
+    <p class="lab rv">Wedding Reception</p>
+    <h1 class="names rv"><span class="nm" data-t="groom">Alfred</span><span class="amp">&amp;</span><span class="nm" data-t="bride">Bride</span></h1>
+    <p class="sub rv" data-t="dateLong"></p>
+  </div>
+  <div class="cue rv" aria-hidden="true"><span class="lab">Scroll</span><i></i></div>
+</section>
+
+<!-- 2 · The rings -->
+<section class="scene sc1" id="s1" aria-label="Invitation">
+  <div class="bgw"><img class="bg" src="assets/rings.webp" alt="Two gold wedding rings resting on an open Bible"></div>
+  <div class="veil"></div>
+  <div class="copy t1">
+    <p class="lab rv">Together with their families</p>
+    <p class="big rv">request the honour of your presence at the wedding reception of</p>
+  </div>
+  <div class="copy t2">
+    <p class="names2 rv"><span data-t="groom">Alfred</span><i>&amp;</i><span data-t="bride">Bride</span></p>
+    <q class="rv">Two are better than one, because they have a good return for their labour.</q>
+    <p class="lab ref rv">Ecclesiastes 4:9</p>
+  </div>
+</section>
+
+<!-- 3 · The aisle -->
+<section class="scene sc2" id="s2" aria-label="The date">
+  <div class="bgw"><img class="bg" src="assets/aisle.webp" alt="A candle-lit church aisle lined with white roses"></div>
+  <div class="veil"></div>
+  <div class="copy t1">
+    <q class="rv">A cord of three strands is not easily broken.</q>
+    <p class="lab ref rv">Ecclesiastes 4:12</p>
+  </div>
+  <div class="t2 glass rb" aria-label="Date of the reception">
+    <p class="lab">Save the date</p>
+    <div class="dateline"><span class="wd" data-t="weekday"></span><span class="dd" data-t="day"></span><span class="my" data-t="monthYear"></span></div>
+    <p class="tm">Reception from <span data-t="time"></span></p>
+    <div class="cd" aria-label="Countdown to the reception">
+      <div><b data-cd="d">00</b><span>Days</span></div>
+      <div><b data-cd="h">00</b><span>Hours</span></div>
+      <div><b data-cd="m">00</b><span>Min</span></div>
+      <div><b data-cd="s">00</b><span>Sec</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · The church -->
+<section class="scene sc3" id="s3" aria-label="Venue">
+  <div class="church rb"><img src="assets/church.webp" alt="Watercolor painting of the church"></div>
+  <div class="copy">
+    <p class="lab rv">Join us at</p>
+    <h2 class="rv" data-t="venueName"></h2>
+    <p class="rule rv" aria-hidden="true"><i></i><b></b><i></i></p>
+    <p class="when rv"><span data-t="dateLong"></span> · <span data-t="time"></span></p>
+    <p class="addr rv"><span data-t="venueAddress"></span><br>Dinner from <span data-t="dinnerTime"></span></p>
+    <div class="acts rv"><a class="btn" data-href="mapLink" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a></div>
+  </div>
+</section>
+
+<!-- 5 · The swing -->
+<section class="scene sc4" id="s4" aria-label="Blessings">
+  <div class="bgw"><img class="bg" src="assets/swing.webp" alt="A floral garden swing"></div>
+  <div class="veil"></div>
+  <div class="copy f-top">
+    <p class="script rv">Forever begins here</p>
+    <p class="rv">Your presence is the blessing we wish for</p>
+  </div>
+  <div class="panel rb">
+    <div class="fam">
+      <div><h3>The Groom's Family</h3><p data-t="groomParents"></p></div>
+      <div><h3>The Bride's Family</h3><p data-t="brideParents"></p></div>
+    </div>
+    <p class="tag" data-t="hashtag"></p>
+    <p class="with">With love, the families of <span data-t="groom"></span> &amp; <span data-t="bride"></span></p>
+    <div class="acts">
+      <a class="btn" data-href="share" target="_blank" rel="noopener">Share</a>
+      <a class="btn ghost" data-href="rsvp" hidden>RSVP</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+</main>
+
+<script id="inv-config" type="application/json">{"groomName":"Alfred","brideName":"Bride","eventDate":"2026-12-19T18:00","venueName":"Venue Name","venueAddress":"Church / hall address, City","mapLink":"","dinnerTime":"07:30 PM","hashtag":"#Alfred_Weds_Bride","groomFather":"Father's name","groomMother":"Mother's name","brideFather":"Father's name","brideMother":"Mother's name","rsvpPhone":""}</script>
+
+<script>
+/* ---------- data: everything the guest sees is driven by #inv-config ---------- */
+(function () {
+  var C = JSON.parse(document.getElementById('inv-config').textContent);
+  var d = new Date(C.eventDate), ok = !isNaN(d.getTime());
+  var f = function (o) { try { return d.toLocaleDateString('en-GB', o); } catch (e) { return ''; } };
+  var time = '';
+  if (ok) { try { time = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }); } catch (e) {} }
+  var weekday = ok ? f({ weekday: 'long' }) : '';
+  var dateLong = ok ? f({ day: 'numeric', month: 'long', year: 'numeric' }) : '';
+  var parents = function (a, b) { return 'Mr. ' + a + ' & Mrs. ' + b; };
+  var shareText = 'You are invited to the wedding reception of ' + C.groomName + ' & ' + C.brideName + ' on ' + dateLong + ', ' + time + ' at ' + C.venueName + '.';
+  var V = {
+    groom: C.groomName, bride: C.brideName, weekday: weekday, dateLong: dateLong, time: time,
+    day: ok ? String(d.getDate()).padStart(2, '0') : '00',
+    monthYear: ok ? f({ month: 'long', year: 'numeric' }) : '',
+    gateDate: weekday + ' · ' + dateLong,
+    venueName: C.venueName, venueAddress: C.venueAddress, dinnerTime: C.dinnerTime, hashtag: C.hashtag,
+    groomParents: parents(C.groomFather, C.groomMother), brideParents: parents(C.brideFather, C.brideMother)
+  };
+  document.querySelectorAll('[data-t]').forEach(function (el) { var v = V[el.getAttribute('data-t')]; if (v != null) el.textContent = v; });
+  var H = {
+    mapLink: C.mapLink,
+    share: 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + (/^https?:/.test(location.href) ? location.href.split('#')[0] : '')),
+    rsvp: C.rsvpPhone ? 'tel:' + C.rsvpPhone.replace(/[^0-9+]/g, '') : ''
+  };
+  document.querySelectorAll('[data-href]').forEach(function (a) {
+    var h = H[a.getAttribute('data-href')];
+    if (h) { a.setAttribute('href', h); a.hidden = false; } else a.hidden = true;
+  });
+  document.title = C.groomName + ' & ' + C.brideName + ' – Wedding Reception';
+
+  // countdown
+  var cd = {}; document.querySelectorAll('[data-cd]').forEach(function (el) { cd[el.getAttribute('data-cd')] = el; });
+  var pad = function (n) { return String(Math.max(0, n)).padStart(2, '0'); };
+  function tick() {
+    if (!ok) return;
+    var t = Math.floor(Math.max(0, d.getTime() - Date.now()) / 1000);
+    cd.d.textContent = pad(Math.floor(t / 86400)); cd.h.textContent = pad(Math.floor(t / 3600) % 24);
+    cd.m.textContent = pad(Math.floor(t / 60) % 60); cd.s.textContent = pad(t % 60);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+
+<script>
+/* ---------- the scroll story ---------- */
+(function () {
+  var g = window.gsap, ST = window.ScrollTrigger, root = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.__intro = function () {};
+  if (!g || !ST || reduce) return;           // falls back to plain stacked sections
+  g.registerPlugin(ST);
+  ST.config({ ignoreMobileResize: true });
+  root.classList.add('anim');
+
+  var $ = function (s) { return document.querySelector(s); };
+  var all = function (s) { return document.querySelectorAll(s); };
+
+  // each element gets a fixed ~1 unit stagger; glass cards only fade/slide so their backdrop blur survives
+  function show(sel, at, dur, blur) {
+    tl.fromTo(sel, { autoAlpha: 0, y: 46, filter: blur === false ? 'none' : 'blur(8px)' },
+      { autoAlpha: 1, y: 0, filter: blur === false ? 'none' : 'blur(0px)', duration: dur, stagger: 1.1, ease: 'power2.out', immediateRender: true }, at);
+  }
+  function hide(sel, at, dur, blur) {
+    tl.to(sel, { autoAlpha: 0, y: -38, filter: blur === false ? 'none' : 'blur(6px)', duration: dur, stagger: 0.25, ease: 'power2.in' }, at);
+  }
+
+  var tl = g.timeline({
+    defaults: { ease: 'none' },
+    scrollTrigger: { trigger: '.stage', start: 'top top', end: function () { return '+=' + Math.round(window.innerHeight * 11); }, pin: true, anticipatePin: 1, scrub: 1.3, invalidateOnRefresh: true,
+      onUpdate: function (s) { g.set('.prog', { scaleX: s.progress }); fx.boost = Math.min(5, Math.abs(s.getVelocity()) / 700); } }
+  });
+
+  // 0 → 1 : walk through the arch into the rings
+  tl.to('.sc0 .bg', { scale: 2.1, ease: 'power1.in', duration: 26 }, 0);
+  hide('.sc0 .rv', 8, 5);
+  tl.fromTo('#s1', { clipPath: 'inset(52% 36% 16% 36% round 999px 999px 0px 0px)', autoAlpha: 0 }, { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', autoAlpha: 1, duration: 15, ease: 'power2.inOut' }, 11);
+  tl.fromTo('.sc1 .bg', { scale: 1.45 }, { scale: 1.04, duration: 36 }, 11);
+  show('.sc1 .t1 .rv', 23, 5);
+  show('.sc1 .t2 .rv', 28, 5);
+  hide('.sc1 .rv', 44, 5);
+
+  // 1 → 2 : an iris opens onto the church aisle
+  tl.fromTo('#s2', { clipPath: 'circle(0% at 50% 58%)' }, { clipPath: 'circle(78% at 50% 58%)', duration: 13, ease: 'power2.inOut' }, 46);
+  tl.fromTo('.sc2 .bg', { scale: 1.5, transformOrigin: '50% 55%' }, { scale: 1, duration: 40 }, 46);
+  show('.sc2 .t1 .rv', 57, 5);
+  hide('.sc2 .t1 .rv', 66, 4);
+  show('.sc2 .t2', 70, 6, false);
+  hide('.sc2 .t2', 82, 4, false);
+
+  // 2 → 3 : an ivory page sweeps in from the right with the church rising
+  tl.fromTo('#s3', { clipPath: 'inset(0% 0% 0% 100%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 11, ease: 'power2.inOut' }, 83);
+  tl.fromTo('.sc3 .church', { y: 140, scale: 0.8, autoAlpha: 0 }, { y: 0, scale: 1, autoAlpha: 1, duration: 14, ease: 'power2.out', immediateRender: true }, 85);
+  show('.sc3 .rv', 92, 5);
+  hide('.sc3 .rv', 107, 4);
+  tl.to('.sc3 .church', { y: -60, scale: 1.06, autoAlpha: 0, duration: 5, ease: 'power1.in' }, 107);
+
+  // 3 → 4 : a soft dissolve to the garden swing, then the families
+  tl.fromTo('#s4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 9, ease: 'power1.inOut', immediateRender: true }, 106);
+  tl.fromTo('.sc4 .bg', { scale: 1.3 }, { scale: 1, duration: 18 }, 106);
+  show('.sc4 .f-top .rv', 113, 5);
+  hide('.sc4 .f-top .rv', 125, 4);
+  show('.sc4 .panel', 128, 5, false);
+  tl.to({}, { duration: 8 }, 133);          // rests on the finale
+
+  // ---------- intro (plays when the gate opens) ----------
+  g.set(['.sc0 .bgw', '.sc0 .copy', '.sc0 .cue'], { opacity: 0 });
+  g.set('.sc0 .nm', { clipPath: 'inset(-20% 100% -20% -10%)' });
+  var played = false;
+  window.__intro = function () {
+    if (played) return; played = true;
+    var it = g.timeline({ delay: 0.25 });
+    it.fromTo('.sc0 .bgw', { scale: 1.2 }, { scale: 1, opacity: 1, duration: 3, ease: 'power2.out' }, 0)
+      .to('.sc0 .copy', { opacity: 1, duration: 1.2, ease: 'power1.out' }, 0.8)
+      .from('.sc0 .lab', { y: 20, opacity: 0, duration: 1.2, ease: 'expo.out' }, 0.9)
+      .to('.sc0 .nm', { clipPath: 'inset(-20% -10% -20% -10%)', duration: 1.8, stagger: 0.45, ease: 'power2.inOut' }, 1.1)
+      .from('.sc0 .amp', { scale: 0.4, opacity: 0, duration: 1, ease: 'back.out(2)' }, 1.5)
+      .from('.sc0 .sub', { y: 20, opacity: 0, duration: 1.2, ease: 'expo.out' }, 2.3)
+      .to('.sc0 .cue', { opacity: 1, duration: 1 }, 3);
+  };
+
+  // ---------- fluid extras ----------
+  // gentle pointer parallax on the artwork (desktop)
+  if (window.matchMedia('(pointer:fine)').matches) {
+    var qx = [], qy = [];
+    all('.bgw').forEach(function (el, i) { qx[i] = g.quickTo(el, 'x', { duration: 1.2, ease: 'power3' }); qy[i] = g.quickTo(el, 'y', { duration: 1.2, ease: 'power3' }); });
+    window.addEventListener('pointermove', function (e) {
+      var nx = e.clientX / innerWidth - 0.5, ny = e.clientY / innerHeight - 0.5;
+      qx.forEach(function (q, i) { q(nx * -14); qy[i](ny * -14); });
+    });
+  }
+  // the swing rocks gently
+  g.fromTo('.sc4 .bgw', { rotation: -0.45 }, { rotation: 0.45, transformOrigin: '50% 0%', duration: 3.4, ease: 'sine.inOut', repeat: -1, yoyo: true });
+
+  // ---------- falling petals and golden dust ----------
+  var fx = { boost: 0 };
+  (function () {
+    var c = $('#fx'), x = c.getContext('2d'), W, H, dpr, P = [];
+    var cols = ['rgba(255,255,255,.9)', 'rgba(250,226,222,.9)', 'rgba(236,184,184,.8)', 'rgba(255,244,226,.9)'];
+    function size() { dpr = Math.min(window.devicePixelRatio || 1, 2); W = c.width = Math.round(innerWidth * dpr); H = c.height = Math.round(innerHeight * dpr); }
+    function make(init) {
+      var dust = Math.random() < 0.35;
+      return { dust: dust, x: Math.random() * W, y: init ? Math.random() * H : -20 * dpr, s: (dust ? 1.2 + Math.random() * 2 : 5 + Math.random() * 8) * dpr, vy: (0.3 + Math.random() * 0.7) * dpr, vx: (Math.random() - 0.5) * 0.4 * dpr, r: Math.random() * 6.28, vr: (Math.random() - 0.5) * 0.04, sw: Math.random() * 6.28, col: dust ? 'rgba(236,205,130,' : cols[(Math.random() * cols.length) | 0] };
+    }
+    size();
+    var n = innerWidth < 700 ? 30 : 52;
+    for (var i = 0; i < n; i++) P.push(make(true));
+    window.addEventListener('resize', size);
+    var t = 0;
+    g.ticker.add(function () {
+      t += 0.016; x.clearRect(0, 0, W, H);
+      var rate = 1 + fx.boost * 2.2;
+      for (var i = 0; i < P.length; i++) {
+        var p = P[i];
+        p.y += p.vy * rate; p.sw += 0.02; p.x += (p.vx + Math.sin(p.sw) * 0.5 * dpr) * rate; p.r += p.vr * rate;
+        if (p.y > H + 20 * dpr) P[i] = make(false);
+        if (p.dust) {
+          var a = 0.35 + 0.35 * Math.sin(t * 3 + i);
+          x.fillStyle = p.col + a + ')'; x.beginPath(); x.arc(p.x, p.y, p.s, 0, 6.283); x.fill();
+        } else {
+          x.save(); x.translate(p.x, p.y); x.rotate(p.r); x.scale(1, 0.62 + 0.38 * Math.sin(p.sw * 1.7));
+          x.fillStyle = p.col; x.beginPath(); x.ellipse(0, 0, p.s, p.s * 0.58, 0, 0, 6.283); x.fill(); x.restore();
+        }
+      }
+      fx.boost *= 0.94;
+    });
+  })();
+
+  document.fonts && document.fonts.ready && document.fonts.ready.then(function () { ST.refresh(); });
+  window.addEventListener('load', function () { ST.refresh(); });
+})();
+</script>
+
+<!-- Background music: put music.mp3 next to index.html. The button stays hidden until that file exists. -->
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+<button id="musicBtn" type="button" aria-label="Music on/off">&#128263;</button>
+<script>
+(function () {
+  var a = document.getElementById('bgm'), b = document.getElementById('musicBtn');
+  var started = false, userMuted = false;
+  fetch('music.mp3', { method: 'HEAD' }).then(function (r) {
+    if (!r.ok) return;
+    b.style.display = 'block';
+    ['pointerdown', 'touchend', 'click', 'keydown'].forEach(function (e) { document.addEventListener(e, start, { passive: true }); });
+  }).catch(function () {});
+  function fadeIn() {
+    a.volume = 0;
+    var t = setInterval(function () { a.volume = Math.min(0.6, a.volume + 0.05); if (a.volume >= 0.6) clearInterval(t); }, 120);
+  }
+  function play() { started = true; fadeIn(); return a.play().catch(function (e) { started = false; throw e; }); }
+  function start(ev) { if (started || userMuted || (ev && ev.target === b)) return; play().catch(function () {}); }
+  a.addEventListener('playing', function () { b.innerHTML = '&#128266;'; });
+  a.addEventListener('pause', function () { b.innerHTML = '&#128263;'; });
+  b.addEventListener('click', function (ev) {
+    ev.stopPropagation();
+    if (a.paused) { userMuted = false; play().catch(function () {}); } else { userMuted = true; a.pause(); }
+  });
+  var gate = document.getElementById('gate');
+  function openGate(ev) {
+    if (ev) ev.preventDefault();
+    if (!started && !userMuted && b.style.display === 'block') play().catch(function () {});
+    gate.classList.add('gone');
+    if (window.__intro) window.__intro();
+  }
+  gate.addEventListener('click', openGate);
+  gate.addEventListener('wheel', function (ev) { ev.preventDefault(); }, { passive: false });
+  gate.addEventListener('touchmove', function (ev) { ev.preventDefault(); }, { passive: false });
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) a.pause(); else if (started && !userMuted) a.play().catch(function () {});
+  });
+})();
+</script>
+</body></html>
